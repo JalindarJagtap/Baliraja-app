@@ -1,11 +1,11 @@
-import 'package:baapwallet/widgets/text_widget.dart';
+// import 'package:baapwallet/widgets/text_widget.dart';
 import 'package:baliraja/widgets/circularprogress-indicator.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../consts/app_sizes.dart';
-import 'custom_circular_progress_indicator.dart';
+// import '../consts/app_sizes.dart';
+// import 'custom_circular_progress_indicator.dart';
 
 class OutlineButtonWidget extends StatefulWidget {
   final String? text;
