@@ -1,7 +1,9 @@
+import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String splashScreen = "/splash";
+  static const  String cowsalesscreen ="/cowsale";
 
   GoRouter get router => _goRouter;
 
@@ -12,6 +14,10 @@ class Routes {
       //   path: splashScreen,
       //   builder: (context, state) => const SplashScreen(),
       // ),
+          GoRoute(
+        path: cowsalesscreen,
+        builder: (context, state) => const CowSales(),
+      ),
     ],
   );
 }

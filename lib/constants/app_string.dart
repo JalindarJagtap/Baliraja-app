@@ -1,6 +1,6 @@
 class AppStrings {
   static const String gaivikri = "गायी विक्रीसाठी ";
-  static const String gainivada = "गाय निवडा *";
+  static const String gainivada = "गाय निवडा";
   static const String jarshi = "जर्सी ";
   static const String khilari = "खिलारी";
   static const String dangi = "डांगी";
