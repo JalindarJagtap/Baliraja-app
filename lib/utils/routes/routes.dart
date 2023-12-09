@@ -1,14 +1,17 @@
+import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
 import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
+import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String splashScreen = "/splash";
-  static const String editProfileScreen="/editProfile";
+  static const String editProfileScreen = "/editProfile";
+  static const String cowsalesscreen = "/cowsale";
 
   GoRouter get router => _goRouter;
 
   late final GoRouter _goRouter = GoRouter(
-    initialLocation: editProfileScreen,
+    initialLocation: splashScreen,
     routes: [
       // GoRoute(
       //   path: splashScreen,
@@ -17,8 +20,12 @@ class Routes {
 
       GoRoute(
         path: editProfileScreen,
-        builder: (context, state) => EditProfileScreen(), 
-        )
+        builder: (context, state) => const EditProfileScreen(),
+      ),
+      GoRoute(
+        path: cowsalesscreen,
+        builder: (context, state) => const CowSales(),
+      ),
     ],
   );
 }
