@@ -19,32 +19,46 @@ class _AccountScreenState extends State<UserAccountScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  _usertitle(),
-                ],
-              ),
-              TextWidget(
-                data: AppStrings.centertitle,
-                color: AppColors.blackColor,
-                fontSize: 25.sp,
-              ),
-              SizedBox(height: 20.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _buildTextFormField(),
-                  SizedBox(width: 10.w),
-                  _buildTextFormField(),
-                ],
-              ),
-              _appbutton()
-            ],
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(AppImages.bgimages),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 5, right: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      _usertitle(),
+                    ],
+                  ),
+                ),
+                TextWidget(
+                  data: AppStrings.centertitle,
+                  color: AppColors.blackColor,
+                  fontSize: 30.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildTextFormField(),
+                    SizedBox(width: 10.w),
+                    _buildTextFormField2(),
+                  ],
+                ),
+                _appbutton(),
+                SizedBox(
+                  height: 10.h,
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -63,8 +77,8 @@ class _AccountScreenState extends State<UserAccountScreen> {
           width: 10.w,
         ),
         const CircleAvatar(
-          radius: 30,
-          backgroundColor: Color.fromARGB(255, 219, 104, 104),
+          radius: 25,
+          backgroundImage: AssetImage(AppImages.circleAvatarimages),
         ),
       ],
     );
@@ -72,47 +86,76 @@ class _AccountScreenState extends State<UserAccountScreen> {
 
   _buildTextFormField() {
     return SizedBox(
-      width: 130.w,
+      width: 165.w,
       child: Column(
         children: [
-          Container(
-            color: AppColors.grayColor,
-            child: TextFormFieldWidget(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.lastname,
           ),
           SizedBox(height: 10.h),
-          Container(
-            color: AppColors.grayColor,
-            child: TextFormFieldWidget(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.firstname,
           ),
           SizedBox(height: 10.h),
-          Container(
-            color: AppColors.grayColor,
-            child: TextFormFieldWidget(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.middlename,
           ),
           SizedBox(height: 10.h),
-          Container(
-            color: AppColors.grayColor,
-            child: TextFormFieldWidget(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.state,
           ),
           SizedBox(height: 10.h),
-          Container(
-            color: AppColors.grayColor,
-            child: TextFormFieldWidget(
-              fontSize: 20.sp,
-              fontWeight: FontWeight.bold,
-            ),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.taluka,
+          ),
+        ],
+      ),
+    );
+  }
+
+  _buildTextFormField2() {
+    return SizedBox(
+      width: 165.w,
+      child: Column(
+        children: [
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.gender,
+          ),
+          SizedBox(height: 10.h),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.age,
+          ),
+          SizedBox(height: 10.h),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.pincode,
+          ),
+          SizedBox(height: 10.h),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.district,
+          ),
+          SizedBox(height: 10.h),
+          TextFormFieldWidget(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            lableText: AppStrings.village,
           ),
         ],
       ),
@@ -120,11 +163,10 @@ class _AccountScreenState extends State<UserAccountScreen> {
   }
 
   _appbutton() {
-    return Container(
-      width: 140.w,
-      child: OutlineButtonWidget(
-        buttonWidth: 5.w,
-        buttonHeight: 15.h,
+    return SizedBox(
+      height: 30.h,
+      width: 100.w,
+      child: const OutlineButtonWidget(
         text: AppStrings.buttontext,
         fontWeight: FontWeight.bold,
       ),
