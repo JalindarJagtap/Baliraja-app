@@ -6,4 +6,11 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
+  static const String varificationCode = "Varification Code";
+  static const String pleaseEnterYour = "Please enter your";
+  static const String done = "Done";
+  static const String resendIn = "Resend in";
+  static const String otp = "OTP";
+  static const String obsureOtpText = "●";
+  static const String otpTime = "00:45";
 }
