@@ -4,4 +4,9 @@ class AppStrings {
   static const String paregaonLive = "Paregaon Live ";
 
   static const String editProfile="Edit Profile ";
+  static const String editProfileScreen="place Enter";
+ 
+
+
+
 }
