@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget({
-    required this.context,
+     this.context,
     super.key,
     this.data,
     this.fontWeight,
@@ -11,7 +11,7 @@ class TextWidget extends StatelessWidget {
     this.fontSize,
   });
 
-  final BuildContext context;
+  final BuildContext? context;
   final String? data;
   final FontWeight? fontWeight;
   final Color? color;
