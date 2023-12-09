@@ -1,7 +1,9 @@
+import 'package:baliraja/presentatioin/mobile_verification_screen/mobile_verification.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String splashScreen = "/splash";
+  static const String verificationScreen="/verificationscreen";
 
   GoRouter get router => _goRouter;
 
@@ -12,6 +14,12 @@ class Routes {
       //   path: splashScreen,
       //   builder: (context, state) => const SplashScreen(),
       // ),
+      GoRoute(
+        path: verificationScreen,
+        builder: (context, state) => const VerificationScreen() ,
+        
+        )
+
     ],
   );
 }

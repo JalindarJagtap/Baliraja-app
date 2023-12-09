@@ -7,7 +7,8 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // usePathUrlStrategy();
   // GoRouter.optionURLReflectsImperativeAPIs = true;
-  runApp(MyApp());
+  runApp(MyApp()); 
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +30,12 @@ class MyApp extends StatelessWidget {
           routeInformationProvider: appRoutes.router.routeInformationProvider,
           routerDelegate: appRoutes.router.routerDelegate,
         );
+        
       },
+      
+    
     );
+    
   }
+
 }
