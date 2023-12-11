@@ -7,6 +7,7 @@ class AppStrings {
   static const String onyournumber="on your phone number";
   static const String enterYourNumber="Enter your number";
   static const String getOtp="Get OTP";
+  static const String india="+91 ";
 }
 
 

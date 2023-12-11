@@ -14,6 +14,7 @@ class VerificationScreen extends StatefulWidget {
 }
 
 class _VerificationScreenState extends State<VerificationScreen> {
+  TextEditingController _mobileController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,22 +70,20 @@ class _VerificationScreenState extends State<VerificationScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  color: AppColors.cyan,
-                  child: const TextField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: AppStrings.enterYourNumber,
-                        prefixIcon: Icon(
-                          Icons.phone,
-                        )),
+               
+               
+                TextField(
+                  controller: _mobileController,
+                  keyboardType: TextInputType.phone,
+                  maxLength: 10, // including "91"
+                  decoration: const InputDecoration(
+                    prefixText: AppStrings.india,
+                    filled: true,
+                    fillColor: AppColors.cyan,
                   ),
                 ),
               ])),
-          const SizedBox(height: 100),
+          const SizedBox(height: 50),
           Container(
             height: 40.h,
             child: ElevatedButton(
