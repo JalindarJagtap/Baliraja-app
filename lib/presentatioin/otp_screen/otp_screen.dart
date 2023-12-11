@@ -1,3 +1,4 @@
+import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/button_widget.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
@@ -29,20 +30,20 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                   child: TextWidget(
                       data: AppStrings.varificationCode,
                       fontSize: 28.sp,
-                      color: Colors.black,
+                      color: AppColors.blackColor,
                       fontWeight: FontWeight.bold),
                 ),
                 Column(
                   children: [
                     TextWidget(
                       data: AppStrings.pleaseEnterYour,
-                      color: Colors.black,
+                      color: AppColors.blackColor,
                       fontSize: 22.sp,
                     ),
                     TextWidget(
                       data: AppStrings.otp,
                       fontSize: 22.sp,
-                      color: Colors.black,
+                      color: AppColors.blackColor,
                     ),
                     SizedBox(
                       height: 40.h,
@@ -56,7 +57,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                       ),
                       inputFormatters: [
                         LengthLimitingTextInputFormatter(4),
-                        FilteringTextInputFormatter.digitsOnly
+                        FilteringTextInputFormatter.digitsOnly,
                       ],
                       closeKeyboardWhenCompleted: true,
                       keyboardType: TextInputType.number,
@@ -85,7 +86,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                       ),
                       length: 4,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -94,16 +95,15 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                         TextWidget(
                           data: AppStrings.resendIn,
                           fontSize: 22.sp,
-                          color: Colors.black,
+                          color: AppColors.blackColor,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20,
                         ),
                         TextWidget(
                           data: AppStrings.otpTime,
                           fontSize: 22.sp,
-                          
-                          color: Colors.black,
+                          color: AppColors.blackColor,
                         )
                       ],
                     ),
@@ -112,7 +112,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                 Container(
                   height: 40.h,
                   width: 140.w,
-                  child: OutlineButtonWidget(
+                  child: const OutlineButtonWidget(
                     labelFontSize: 18,
                     text: AppStrings.done,
                     borderRadius: 10,
