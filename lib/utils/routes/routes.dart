@@ -5,8 +5,7 @@ import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String splashScreen = "/splash";
-  static const String editProfileScreen = "/editProfile";
-  static const String cowsalesscreen = "/cowsale";
+  static const String useraccountscreen = "/useraccountscreen";
 
   GoRouter get router => _goRouter;
 
@@ -15,17 +14,12 @@ class Routes {
     routes: [
       // GoRoute(
       //   path: splashScreen,
-      //   builder: (context, state) => const SplashScreen(),
+      //   builder: (context, state) => SplashScreen(),
       // ),
-
       GoRoute(
-        path: editProfileScreen,
-        builder: (context, state) => const EditProfileScreen(),
-      ),
-      GoRoute(
-        path: cowsalesscreen,
-        builder: (context, state) => const CowSales(),
-      ),
+        path: useraccountscreen,
+        builder: (context, state) => const UserAccountScreen(),
+      )
     ],
   );
 }
