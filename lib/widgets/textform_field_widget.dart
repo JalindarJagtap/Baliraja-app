@@ -1,3 +1,4 @@
+import 'package:baliraja/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,10 +16,12 @@ class TextFormFieldWidget extends StatelessWidget {
     this.fontSize,
     this.color,
     this.height,
+    this.lableText,
     this.suffix,
   }) : super(key: key);
 
   final String? hintText;
+  final String? lableText;
   final FontWeight? fontWeight;
   final double? fontSize;
   final Color? color;
@@ -45,10 +48,17 @@ class TextFormFieldWidget extends StatelessWidget {
       ),
       decoration: InputDecoration(
         hintText: hintText,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+        labelText: lableText,
+        labelStyle: const TextStyle(color: AppColors.blackColor),
+        filled: true,
+        fillColor: AppColors.graywhiteColor,
+        focusedBorder: const OutlineInputBorder(
+          borderSide: BorderSide(color: AppColors.blackColor),
+        ),
+        border: const OutlineInputBorder(),
         hintStyle: GoogleFonts.kumbhSans(
           fontWeight: fontWeight,
-          color: color ?? Theme.of(context).hintColor,
+          color: color ?? Theme.of(context).shadowColor,
           fontSize: fontSize,
         ),
       ),
