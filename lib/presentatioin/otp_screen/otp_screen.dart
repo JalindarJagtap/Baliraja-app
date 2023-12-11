@@ -21,12 +21,12 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
       child: Scaffold(
         body: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30),
+            padding: EdgeInsets.symmetric(vertical: 30.h),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 25),
+                  padding: EdgeInsets.only(top: 25.h),
                   child: TextWidget(
                       data: AppStrings.varificationCode,
                       fontSize: 28.sp,
@@ -62,16 +62,17 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                       closeKeyboardWhenCompleted: true,
                       keyboardType: TextInputType.number,
                       focusedPinTheme: PinTheme(
-                          height: 40.h,
-                          width: 40.w,
-                          decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Theme.of(context)
-                                    .dividerColor
-                                    .withOpacity(0.4),
-                              ),
-                              color: Theme.of(context).scaffoldBackgroundColor,
-                              borderRadius: BorderRadius.circular(8.r))),
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color:
+                                Theme.of(context).dividerColor.withOpacity(0.4),
+                          ),
+                          color: Theme.of(context).scaffoldBackgroundColor,
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                      ),
                       defaultPinTheme: PinTheme(
                         height: 40.h,
                         width: 40.w,
@@ -109,6 +110,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                     ),
                   ],
                 ),
+                // ignore: sized_box_for_whitespace
                 Container(
                   height: 40.h,
                   width: 140.w,
