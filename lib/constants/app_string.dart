@@ -27,4 +27,50 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
+  static const String vyaparivarg = "व्यापारी वर्ग ";
+  static const String sangamner = "संगमनेर";
+  static const String  sirioulnumber = "अ.नं";
+  static const String  vyaparyachenav = "व्यापाऱ्याचे नाव";
+  static const String  comapnyname = "कंपनी नाव";
+  static const String  malachenav = "मालाचे नाव" ;
+  static const String  a = "1" ;
+  static const String  b = "2" ;
+  static const String  c = "3" ;
+  static const String  d = "4" ;
+  static const String  e = "5" ;
+  static const String  f = "6" ;
+  static const String  babasaheb = "बाबासाहेब नवले" ;
+  static const String  mansukh = "मनसुख भंडारी    " ;
+  static const String  rsik = "रसिक बागवान " ;
+  static const String  satish = "सतीश भंडारी" ;
+  static const String  sonwane = "सोनवणे " ;
+  static const String  navle = "नवले ट्रेंडिंग कंपनी " ;
+  static const String  bhandari = "भंडारी ट्रेंडिंग कंपनी " ;
+  static const String  bagvan = "बागवान ट्रेंडिंग कंपनी " ;
+  static const String  sonwanea = "सोनवणे ट्रेंडिंग कंपनी " ;
+
+  static const String  mala = "कांदा,बटाटे,वांगे" ;
+  static const String  malb = "टोमॅटो,लिंबू ,कोबी" ;
+  static const String  malc = "डालिंब,द्राक्षे" ;
+  static const String  mald = "केळी,संत्री" ;
+  static const String  male = "मेथी,कोथंबीर" ;
+
+
+
+
+  
+
+
+
+ 
+
+
+
+  
+
+
+
+
+  
+  
 }
