@@ -31,7 +31,8 @@ class _AccountScreenState extends State<UserAccountScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 5, right: 5),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
