@@ -1,6 +1,7 @@
 import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/button_widget.dart';
+import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:baliraja/widgets/dropdown_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +12,7 @@ class EditProfileScreen extends StatefulWidget {
   State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
 
-List<String> cowname = [
+List<String> man = [
   "लिंग ",
   "पुरुष ",
   "महिला",
@@ -46,9 +47,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           icon: const Icon(Icons.arrow_back),
         ),
         SizedBox(width: 100.w),
-        const Text(
-          AppStrings.editProfile,
-          style: TextStyle(color: AppColors.grayColor),
+        TextWidget(
+          data: AppStrings.editProfile,
+          color: Colors.black38,
         ),
       ],
     );
@@ -58,10 +59,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     return Column(children: [
       TextField(
         decoration: InputDecoration(
-          hintText: "Enter your name",
-          hintStyle: TextStyle(fontSize: 20, color: Colors.black),
+          hintText: AppStrings.enteryourname,
+          hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.r),
           ),
         ),
       ),
@@ -70,8 +71,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       ),
       TextField(
         decoration: InputDecoration(
-          hintText: "Enter your phone number",
-          hintStyle: TextStyle(fontSize: 20, color: Colors.black),
+          hintText: AppStrings.enteryourphonenumber,
+          hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -82,9 +83,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       ),
       CustomDropdownButton(
         items: [
-          cowname[0],
-          cowname[1],
-          cowname[2],
+          man[0],
+          man[1],
+          man[2],
         ],
         selectedValue: dropdownValue,
         onChanged: (String? newValue) {
@@ -100,9 +101,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       ),
       TextField(
         decoration: InputDecoration(
-          hintText: "वय:45",
-          hintStyle: TextStyle(color: Colors.black, fontSize: 27),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          hintText: AppStrings.enteryourege,
+          hintStyle: TextStyle(color: AppColors.blackColor),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.r)),
         ),
       ),
       SizedBox(
@@ -110,9 +111,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       ),
       TextField(
         decoration: InputDecoration(
-          hintText: "गाव",
-          hintStyle: TextStyle(color: Colors.black, fontSize: 25),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          hintText: AppStrings.enteryourvilage,
+          hintStyle: TextStyle(color: Colors.black, fontSize: 25.sp),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.r)),
         ),
       ),
       SizedBox(
@@ -128,7 +129,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       child: OutlineButtonWidget(
         onPressed: () {},
         borderRadius: 30,
-        text: "पूर्ण झाले",
+        text: AppStrings.OutlineButtonWidget,
       ),
     );
   }
