@@ -17,6 +17,7 @@ class TextFormFieldWidget extends StatelessWidget {
     this.color,
     this.height,
     this.lableText,
+    this.suffix,
   }) : super(key: key);
 
   final String? hintText;
@@ -30,6 +31,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final Function(String)? onChanged;
   final List<TextInputFormatter>? inputFormatters;
   final double? height;
+  final String? suffix;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -38,7 +40,6 @@ class TextFormFieldWidget extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       onChanged: onChanged,
-      autofocus: true,
       style: GoogleFonts.kumbhSans(
         fontWeight: fontWeight,
         color: color ?? Theme.of(context).shadowColor,
