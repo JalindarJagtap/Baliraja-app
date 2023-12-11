@@ -1,18 +1,22 @@
 import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_string.dart';
+import 'package:baliraja/widgets/button_widget.dart';
 import 'package:baliraja/widgets/dropdown_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({Key? key}) : super(key: key);
   @override
   State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
+
 List<String> cowname = [
   "लिंग ",
   "पुरुष ",
   "महिला",
 ];
+
 class _EditProfileScreenState extends State<EditProfileScreen> {
   String? dropdownValue = "लिंग ";
   @override
@@ -26,13 +30,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               _customheaderRow(context),
               const CircleAvatar(),
               _customtextfield(context),
+              _customOutlinedButton(context),
             ],
           ),
         ),
       ),
     );
   }
- _customheaderRow(BuildContext context) {
+
+  _customheaderRow(BuildContext context) {
     return Row(
       children: [
         IconButton(
@@ -47,48 +53,83 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       ],
     );
   }
+
   _customtextfield(BuildContext context) {
-    return Column(
-      children: [
-        TextField(
-          decoration: InputDecoration(
-            hintText: "Enter your name",
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
+    return Column(children: [
+      TextField(
+        decoration: InputDecoration(
+          hintText: "Enter your name",
+          hintStyle: TextStyle(fontSize: 20, color: Colors.black),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
-        SizedBox(
-          height: 10.h,
-        ),
-        TextField(
-          decoration: InputDecoration(
-            hintText: "Enter your phone number",
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      ),
+      SizedBox(
+        height: 10.h,
+      ),
+      TextField(
+        decoration: InputDecoration(
+          hintText: "Enter your phone number",
+          hintStyle: TextStyle(fontSize: 20, color: Colors.black),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
-        SizedBox(
-          height: 10.h,
+      ),
+      SizedBox(
+        height: 10.h,
+      ),
+      CustomDropdownButton(
+        items: [
+          cowname[0],
+          cowname[1],
+          cowname[2],
+        ],
+        selectedValue: dropdownValue,
+        onChanged: (String? newValue) {
+          setState(
+            () {
+              dropdownValue = newValue ?? '111';
+            },
+          );
+        },
+      ),
+      SizedBox(
+        height: 10.h,
+      ),
+      TextField(
+        decoration: InputDecoration(
+          hintText: "वय:45",
+          hintStyle: TextStyle(color: Colors.black, fontSize: 27),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         ),
-        CustomDropdownButton(
-          items: [
-            cowname[0],
-            cowname[1],
-            cowname[2],
-          ],
-          selectedValue: dropdownValue,
-          onChanged: (String? newValue) {
-            setState(
-              () {
-                dropdownValue = newValue ?? '';
-              },
-            );
-          },
+      ),
+      SizedBox(
+        height: 10.h,
+      ),
+      TextField(
+        decoration: InputDecoration(
+          hintText: "गाव",
+          hintStyle: TextStyle(color: Colors.black, fontSize: 25),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         ),
-        SizedBox(
-          height: 10.h,
-        ),
-      ],
+      ),
+      SizedBox(
+        height: 25.h,
+      ),
+    ]);
+  }
+
+  _customOutlinedButton(BuildContext context) {
+    return Container(
+      height: 30.h,
+      width: 120.w,
+      child: OutlineButtonWidget(
+        onPressed: () {},
+        borderRadius: 30,
+        text: "पूर्ण झाले",
+      ),
     );
   }
 }
