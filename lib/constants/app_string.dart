@@ -29,4 +29,12 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
+  static const String enteryourname = "Enter your name";
+  static const String enteryourphonenumber="Enteryourphonenumber";
+  static const String  enteryourege="वय";
+  static const String enteryourvilage="गाव";
+  static const String OutlineButtonWidget="पूर्णझाले ";
+  
+
+
 }

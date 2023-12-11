@@ -24,7 +24,7 @@ class OutlineButtonWidget extends StatefulWidget {
   const OutlineButtonWidget(
       {super.key,
       this.onPressed,
-      this.borderRadius = 0.0,
+      this.borderRadius = 10,
       this.labelColor,
       this.inProgress,
       this.text,

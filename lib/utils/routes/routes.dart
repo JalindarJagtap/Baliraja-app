@@ -17,7 +17,6 @@ class Routes {
       //   path: splashScreen,
       //   builder: (context, state) => const SplashScreen(),
       // ),
-
       GoRoute(
         path: editProfileScreen,
         builder: (context, state) => const EditProfileScreen(),
