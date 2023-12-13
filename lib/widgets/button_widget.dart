@@ -48,7 +48,7 @@ class _OutlineButtonWidgetState extends State<OutlineButtonWidget> {
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
             side: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).shadowColor,
             ),
             borderRadius: BorderRadius.circular(widget.borderRadius),
           ),
@@ -69,7 +69,7 @@ class _OutlineButtonWidgetState extends State<OutlineButtonWidget> {
                   context: context,
                   data: widget.text,
                   fontSize: widget.labelFontSize,
-                  color: Theme.of(context).primaryColor,
+                  color: Theme.of(context).shadowColor,
                   fontWeight: widget.fontWeight,
                 ),
                 widget.isBackArrow ?? false

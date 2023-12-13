@@ -69,15 +69,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       SizedBox(
         height: 10.h,
       ),
-      TextField(
-        decoration: InputDecoration(
-          hintText: AppStrings.enteryourphonenumber,
-          hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
-      ),
+      // TextField(
+      //   decoration: InputDecoration(
+      //     hintText: AppStrings.enteryourphonenumber,
+      //     hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
+      //     border: OutlineInputBorder(
+      //       borderRadius: BorderRadius.circular(10),
+      //     ),
+      //   ),
+      // ),
       SizedBox(
         height: 10.h,
       ),
