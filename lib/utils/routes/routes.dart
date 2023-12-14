@@ -25,6 +25,7 @@ class Routes {
         path: vyapariscreen,
         builder: (context, state) => const MerchantScreen(),
       ),
+     
     ],
   );
 }

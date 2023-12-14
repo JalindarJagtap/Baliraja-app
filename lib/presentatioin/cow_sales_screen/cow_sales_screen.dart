@@ -14,6 +14,7 @@ class CowSales extends StatefulWidget {
 }
 
 List<String> cowname = ["जर्सी", "खिलारी", "डांगी", "देवणी", "गीर गाय"];
+
 List<String> vet = [
   "वेत निवडा",
   "पहिलारू",

@@ -49,19 +49,25 @@ class AppStrings {
   static const String  bagvan = "बागवान ट्रेंडिंग कंपनी " ;
   static const String  sonwanea = "सोनवणे ट्रेंडिंग कंपनी " ;
 
-  static const String  mala = "कांदा,बटाटे,वांगे" ;
-  static const String  malb = "टोमॅटो,लिंबू ,कोबी" ;
-  static const String  malc = "डालिंब,द्राक्षे" ;
-  static const String  mald = "केळी,संत्री" ;
-  static const String  male = "मेथी,कोथंबीर" ;
-
-
-
+  static const String  kiman = "किमान" ;
+  static const String  kmal = "कमाल" ;
+  static const String  sarasari = "सरासरी" ;
+  static const String  mala = "सरासरी" ;
+  static const String  malb = "सरासरी" ;
+  static const String  malc = "सरासरी" ;
+  static const String  mald = "सरासरी" ;
+  static const String  male = "सरासरी" ;
 
   
 
+ 
 
 
+  
+ 
+
+
+ 
  
 
 
