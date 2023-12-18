@@ -64,7 +64,7 @@ class _MerchantScreenState extends State<MerchantScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 195, 239, 241),
+        backgroundColor: AppColors.textblue,
         title: const Text(AppStrings.vyaparivarg,
             style: TextStyle(
                 fontWeight: FontWeight.bold, color: AppColors.blackColor)),
