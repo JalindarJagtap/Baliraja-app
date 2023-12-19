@@ -11,6 +11,26 @@
 
 //   GoRouter get router => _goRouter;
 
+<<<<<<< HEAD
+  late final GoRouter _goRouter = GoRouter(
+    initialLocation: splashScreen,
+    routes: [
+      // GoRoute(
+      //   path: splashScreen,
+      //   builder: (context, state) => const SplashScreen(),
+      // ),
+      GoRoute(
+        path: editProfileScreen,
+        builder: (context, state) => const EditProfileScreen(),
+      ),
+      GoRoute(
+        path: cowsalesscreen,
+        builder: (context, state) => const CowSales(),
+      ),
+    ],
+  );
+}
+=======
 //   late final GoRouter _goRouter = GoRouter(
 //     initialLocation: splashScreen,
 //     routes: [
@@ -38,3 +58,4 @@
 //     ],
 //   );
 // }
+>>>>>>> 12d1b828d0baa48b3e142fdea83c3c16b012ce30
