@@ -15,7 +15,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  final appRoutes = Routes();
+  final appRoutes =Routes();
 
   @override
   Widget build(BuildContext context) {
