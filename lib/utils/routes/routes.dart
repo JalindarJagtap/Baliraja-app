@@ -1,17 +1,17 @@
-// import 'package:baliraja/presentatioin/otp_screen/otp_screen.dart';
-// import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
-// import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
-// import 'package:baliraja/presentatioin/splash_screen/splash_screen.dart';
-// import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
-// import 'package:go_router/go_router.dart';
+import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
+import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
+import 'package:baliraja/presentatioin/market_rate_screen/market_rate_screen.dart';
+import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
+import 'package:go_router/go_router.dart';
 
-// class Routes {
-//   static const String splashScreen = "/splash";
-//   static const String useraccountscreen = "/useraccountscreen";
+class Routes {
+  static const String splashScreen = "/splash";
+  static const String useraccountscreen = "/useraccountscreen";
+  static const String marketratescreen = "/marketratescreen";
 
-//   GoRouter get router => _goRouter;
+  GoRouter get router => _goRouter;
 
-<<<<<<< HEAD
+ 
   late final GoRouter _goRouter = GoRouter(
     initialLocation: splashScreen,
     routes: [
@@ -20,17 +20,16 @@
       //   builder: (context, state) => const SplashScreen(),
       // ),
       GoRoute(
-        path: editProfileScreen,
-        builder: (context, state) => const EditProfileScreen(),
+        path: useraccountscreen,
+        builder: (context, state) => const UserAccountScreen(),
       ),
-      GoRoute(
-        path: cowsalesscreen,
-        builder: (context, state) => const CowSales(),
+       GoRoute(
+        path: marketratescreen,
+        builder: (context, state) => const MarketRateScreen(),
       ),
     ],
   );
 }
-=======
 //   late final GoRouter _goRouter = GoRouter(
 //     initialLocation: splashScreen,
 //     routes: [
@@ -58,4 +57,4 @@
 //     ],
 //   );
 // }
->>>>>>> 12d1b828d0baa48b3e142fdea83c3c16b012ce30
+
