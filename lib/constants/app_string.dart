@@ -29,6 +29,11 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
+  static const String enteryourname = "Enter your name";
+  static const String enteryourphonenumber = "Enteryourphonenumber";
+  static const String enteryourege = "वय";
+  static const String enteryourvilage = "गाव";
+  static const String outlineButtonWidget = "पूर्णझाले ";
   static const String varificationCode = "Varification Code";
   static const String pleaseEnterYour = "Please enter your";
   static const String done = "Done";
@@ -36,11 +41,32 @@ class AppStrings {
   static const String otp = "OTP";
   static const String obsureOtpText = "●";
   static const String otpTime = "00:45";
-  //user_profile_Screen
-  static const String username = "Tushar Dushing ";
-  static const String messege = "messege ";
-  static const String Profileedt = "Edit Prifile ";
-  static const String Setting = "Setting";
-  static const String notification = " Notification";
-  static const String refer = "Invite  to Friend";
+  static const String firstname = "पहिले नाव";
+  static const String middlename = "मधले  नाव  ";
+  static const String state = "राज्य ";
+  static const String district = "जिल्हा  ";
+  static const String village = "गाव ";
+  static const String taluka = "तालुका";
+  static const String gender = "लिंग  ";
+  static const String age = "वय ";
+  static const String pincode = "पिन-कोड ";
+  // cow_purchase_screen strings
+  static const String cowpurchasetext = "गायी खरीदी करा";
+  static const String prizetext = "योग्य भाव  ";
+  static const String shmtatext = "२० लिटर शमता जर्शी ९०% ";
+  static const String cowtext = "गाय";
+  static const String minittext = "२ मिनिट";
+  static const String mahamarga = "नांदूर लोणी महामार्ग";
+  static const String cowinformation = "ही जर्सी गाय ३	 वर्षाची आहे.";
+  static const String cowinfo =
+      "ती दुसन्या दुग्धपानात आहे. आणि २० लिटर दूध देते.";
+  static const String cowinfoall =
+      "ही जर्शी गाय ३ वर्षांची आहे. ती दुसन्या दुग्धपानात आहे,\n आणि सध्या 20 लिटर दूध देते";
+  static const String sellertext = "धोंडीराव";
+  static const String phonetext = "संपर्क करा";
+  static const String username = "Tushar Dushing";
+  static const String messege = "Message";
+  static const String setting = "Setting";
+  static const String notifiacation = "Notification";
+  static const String refer = "Refer";
 }

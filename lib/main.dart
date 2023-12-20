@@ -1,4 +1,3 @@
-import 'package:baliraja/presentatioin/home_screen/home_screen.dart';
 import 'package:baliraja/utils/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  final appRoutes = Routes();
+  final appRoutes =Routes();
 
   @override
   Widget build(BuildContext context) {
