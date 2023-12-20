@@ -30,10 +30,10 @@ class AppStrings {
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
   static const String enteryourname = "Enter your name";
-  static const String enteryourphonenumber="Enteryourphonenumber";
-  static const String  enteryourege="वय";
-  static const String enteryourvilage="गाव";
-  static const String outlineButtonWidget="पूर्णझाले ";
+  static const String enteryourphonenumber = "Enteryourphonenumber";
+  static const String enteryourege = "वय";
+  static const String enteryourvilage = "गाव";
+  static const String outlineButtonWidget = "पूर्णझाले ";
   static const String varificationCode = "Varification Code";
   static const String pleaseEnterYour = "Please enter your";
   static const String done = "Done";
@@ -50,4 +50,18 @@ class AppStrings {
   static const String gender = "लिंग  ";
   static const String age = "वय ";
   static const String pincode = "पिन-कोड ";
+  // cow_purchase_screen strings
+  static const String cowpurchasetext = "गायी खरीदी करा";
+  static const String prizetext = "योग्य भाव  ";
+  static const String shmtatext = "२० लिटर शमता जर्शी ९०% ";
+  static const String cowtext = "गाय";
+  static const String minittext = "२ मिनिट";
+  static const String mahamarga = "नांदूर लोणी महामार्ग";
+  static const String cowinformation = "ही जर्सी गाय ३	 वर्षाची आहे.";
+  static const String cowinfo =
+      "ती दुसन्या दुग्धपानात आहे. आणि २० लिटर दूध देते.";
+  static const String cowinfoall =
+      "ही जर्शी गाय ३ वर्षांची आहे. ती दुसन्या दुग्धपानात आहे,\n आणि सध्या 20 लिटर दूध देते";
+  static const String sellertext = "धोंडीराव";
+  static const String phonetext = "संपर्क करा";
 }
