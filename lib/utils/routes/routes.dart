@@ -11,12 +11,13 @@ class Routes {
 
   GoRouter get router => _goRouter;
 
+ 
   late final GoRouter _goRouter = GoRouter(
     initialLocation: splashScreen,
     routes: [
       // GoRoute(
       //   path: splashScreen,
-      //   builder: (context, state) => SplashScreen(),
+      //   builder: (context, state) => const SplashScreen(),
       // ),
       GoRoute(
         path: useraccountscreen,
@@ -29,3 +30,31 @@ class Routes {
     ],
   );
 }
+//   late final GoRouter _goRouter = GoRouter(
+//     initialLocation: splashScreen,
+//     routes: [
+// <<<<<<< HEAD
+//       // GoRoute(
+//       //   path: splashScreen,
+//       //   builder: (context, state) => const UserAccountScreen(),
+//       // ),
+//       GoRoute(
+//         path: splashScreen,
+//         builder: (context, state) => const GetOtpScreen(),
+//       //   builder: (context, state) => const SplashScreen(),
+//       ),
+
+// =======
+// >>>>>>> 9fdc40b24e842c148ce2b354b3c3aa87b569389c
+//       GoRoute(
+//         path: splashScreen,
+//         builder: (context, state) => const SplashScreen(),
+//       ),
+//       GoRoute(
+//         path: useraccountscreen,
+//         builder: (context, state) => const UserAccountScreen(),
+//       )
+//     ],
+//   );
+// }
+
