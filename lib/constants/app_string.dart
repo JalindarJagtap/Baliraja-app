@@ -29,6 +29,13 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
+
+  static const String enteryourname = "Enter your name";
+  static const String enteryourphonenumber = "Enteryourphonenumber";
+  static const String enteryourege = "वय";
+  static const String enteryourvilage = "गाव";
+  static const String OutlineButtonWidget = "पूर्णझाले ";
+
   static const String varificationCode = "Varification Code";
   static const String pleaseEnterYour = "Please enter your";
   static const String done = "Done";
@@ -51,6 +58,6 @@ class AppStrings {
       "ती दुसन्या दुग्धपानात आहे. आणि २० लिटर दूध देते.";
   static const String cowinfoall =
       "ही जर्शी गाय ३ वर्षांची आहे. ती दुसन्या दुग्धपानात आहे,\n आणि सध्या 20 लिटर दूध देते";
-      static const String sellertext="धोंडीराव";
-      static const String phonetext="संपर्क करा";
+  static const String sellertext = "धोंडीराव";
+  static const String phonetext = "संपर्क करा";
 }

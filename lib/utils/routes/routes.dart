@@ -12,6 +12,7 @@ class Routes {
 
   GoRouter get router => _goRouter;
 
+ 
   late final GoRouter _goRouter =
       GoRouter(initialLocation: splashScreen, routes: [
     // GoRoute(
@@ -25,6 +26,25 @@ class Routes {
     ),
   ]);
 }
+ 
+  // late final GoRouter _goRouter = GoRouter(
+  //   initialLocation: splashScreen,
+  //   routes: [
+  //     // GoRoute(
+  //     //   path: splashScreen,
+  //     //   builder: (context, state) => const SplashScreen(),
+  //     // ),
+  //     GoRoute(
+  //       path: editProfileScreen,
+  //       builder: (context, state) => const EditProfileScreen(),
+  //     ),
+  //     GoRoute(
+  //       path: cowsalesscreen,
+  //       builder: (context, state) => const CowSales(),
+  //     ),
+  //   ],
+  // );
+ 
 
 // =======
 // >>>>>>> 9fdc40b24e842c148ce2b354b3c3aa87b569389c
@@ -39,3 +59,4 @@ class Routes {
 //     ],
 //   );
 // }
+ 
