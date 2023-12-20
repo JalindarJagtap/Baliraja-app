@@ -36,4 +36,11 @@ class AppStrings {
   static const String otp = "OTP";
   static const String obsureOtpText = "●";
   static const String otpTime = "00:45";
+  //user_profile_Screen
+  static const String username = "Tushar Dushing ";
+  static const String messege = "messege ";
+  static const String Profileedt = "Edit Prifile ";
+  static const String Setting = "Setting";
+  static const String notification = " Notification";
+  static const String refer = "Invite  to Friend";
 }
