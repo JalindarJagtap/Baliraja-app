@@ -129,7 +129,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       child: OutlineButtonWidget(
         onPressed: () {},
         borderRadius: 30,
-        text: AppStrings.OutlineButtonWidget,
+        text: AppStrings.outlineButtonWidget,
       ),
     );
   }

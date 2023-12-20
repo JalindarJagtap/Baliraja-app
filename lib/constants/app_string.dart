@@ -29,16 +29,11 @@ class AppStrings {
   static const String centertitle = "खाते तयार करा";
   static const String buttontext = "पूर्ण झाले";
   static const String lastname = "आडनाव ";
-<<<<<<< HEAD
   static const String enteryourname = "Enter your name";
   static const String enteryourphonenumber="Enteryourphonenumber";
   static const String  enteryourege="वय";
   static const String enteryourvilage="गाव";
-  static const String OutlineButtonWidget="पूर्णझाले ";
-  
-
-
-=======
+  static const String outlineButtonWidget="पूर्णझाले ";
   static const String varificationCode = "Varification Code";
   static const String pleaseEnterYour = "Please enter your";
   static const String done = "Done";
@@ -46,5 +41,13 @@ class AppStrings {
   static const String otp = "OTP";
   static const String obsureOtpText = "●";
   static const String otpTime = "00:45";
->>>>>>> 12d1b828d0baa48b3e142fdea83c3c16b012ce30
+  static const String firstname = "पहिले नाव";
+  static const String middlename = "मधले  नाव  ";
+  static const String state = "राज्य ";
+  static const String district = "जिल्हा  ";
+  static const String village = "गाव ";
+  static const String taluka = "तालुका";
+  static const String gender = "लिंग  ";
+  static const String age = "वय ";
+  static const String pincode = "पिन-कोड ";
 }
