@@ -1,8 +1,6 @@
  
 import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
-import 'package:baliraja/presentatioin/cow_purchase_screen/cow_purchase_screen.dart';
 import 'package:baliraja/presentatioin/otp_screen/otp_screen.dart';
-import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
 import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
 import 'package:baliraja/presentatioin/splash_screen/splash_screen.dart';
 import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
