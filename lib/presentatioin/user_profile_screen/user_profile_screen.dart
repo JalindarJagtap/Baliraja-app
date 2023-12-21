@@ -94,8 +94,8 @@ class User_Profile_Screen extends StatelessWidget {
                   Container(
                       height: 50,
                       width: 70,
-                      decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
+                      decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20)),
                           gradient: LinearGradient(
