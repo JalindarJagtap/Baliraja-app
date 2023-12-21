@@ -4,6 +4,7 @@ import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.d
 import 'package:baliraja/presentatioin/home_screen/home_screen.dart';
 import 'package:baliraja/presentatioin/splash_screen/splash_screen.dart';
 import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
+import 'package:baliraja/presentatioin/user_profile_screen/user_profile_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
@@ -12,7 +13,7 @@ class Routes {
   static const String homeScreen = "/home-screen";
   static const String cowsalesscreen = "/cowsale";
   static const String otpscreen = "/otp";
-  // static const String useraccount = "/user-account";
+  static const String userprofile = "/user-profile";
   static const String editprofile = "/edit-profile";
 
   GoRouter get router => _goRouter;
@@ -44,6 +45,9 @@ class Routes {
         path: editprofile,
         builder: (context, state) => const EditProfileScreen(),
       ),
+      GoRoute(path: userprofile ,
+       builder: (context, state) => const User_Profile_Screen (),
+      )
       
     ],
   );
