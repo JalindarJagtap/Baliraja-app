@@ -164,7 +164,7 @@ class User_Profile_Screen extends StatelessWidget {
                         children: [
                           Icon(Icons.settings),
                           TextWidget(
-                            data: AppStrings.Setting,
+                            data: AppStrings.setting,
                             color: AppColors.blackColor,
                             fontSize: 4.sp,
                             fontWeight: FontWeight.bold,
@@ -184,7 +184,7 @@ class User_Profile_Screen extends StatelessWidget {
                         children: [
                           Icon(Icons.notifications_active),
                           TextWidget(
-                            data: AppStrings.notification,
+                            data: AppStrings.notifiacation,
                             color: AppColors.blackColor,
                             fontSize: 4.sp,
                             fontWeight: FontWeight.bold,
@@ -204,7 +204,7 @@ class User_Profile_Screen extends StatelessWidget {
                         children: [
                           Icon(Icons.question_mark_outlined),
                           TextWidget(
-                            data: AppStrings.Setting,
+                            data: AppStrings.setting,
                             color: AppColors.blackColor,
                             fontSize: 4.sp,
                             fontWeight: FontWeight.bold,
