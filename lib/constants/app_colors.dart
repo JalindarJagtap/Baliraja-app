@@ -12,4 +12,7 @@ class AppColors {
   // textformfield color
   static const Color textformFieldColor = Color(0XFF707070);
   static const Color textGrey = Color.fromARGB(255, 59, 59, 59);
+
+  //Icon color
+  static const Color locationicon=Color.fromARGB(255, 221, 22, 8);
 }

@@ -13,7 +13,13 @@ class CowSales extends StatefulWidget {
   State<CowSales> createState() => _CowSalesState();
 }
 
-List<String> cowname = ["जर्सी", "खिलारी", "डांगी", "देवणी", "गीर गाय"];
+List<String> cowname = [
+  "जर्सी",
+  "खिलारी",
+  "डांगी",
+  "देवणी",
+  "गीर गाय",
+];
 List<String> vet = [
   "वेत निवडा",
   "पहिलारू",
@@ -95,7 +101,7 @@ class _CowSalesState extends State<CowSales> {
                 SizedBox(
                   height: 12.h,
                 ),
-            
+
                 //first textfield colse
                 Row(
                   children: [
@@ -157,7 +163,7 @@ class _CowSalesState extends State<CowSales> {
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
                 ),
-                   SizedBox(
+                SizedBox(
                   height: 12.h,
                 ),
                 //third close
@@ -188,7 +194,7 @@ class _CowSalesState extends State<CowSales> {
                   height: 12.h,
                 ),
                 //fourth textfiled close
-                   Row(
+                Row(
                   children: [
                     TextWidget(
                       context: context,
@@ -210,10 +216,12 @@ class _CowSalesState extends State<CowSales> {
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
                 ),
-                   SizedBox(
+                SizedBox(
                   height: 7.h,
                 ),
-             Divider(color: Theme.of(context).shadowColor,),
+                Divider(
+                  color: Theme.of(context).shadowColor,
+                ),
               ],
             ),
           ),
