@@ -1,15 +1,18 @@
 import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
 import 'package:baliraja/presentatioin/otp_screen/otp_screen.dart';
 import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
+import 'package:baliraja/presentatioin/home_screen/home_screen.dart';
 import 'package:baliraja/presentatioin/splash_screen/splash_screen.dart';
 import 'package:baliraja/presentatioin/user_account_screen/user_account_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class Routes {
   static const String splashScreen = "/splash";
+  static const String useraccountscreen = "/useraccountscreen";
+  static const String homeScreen = "/home-screen";
   static const String cowsalesscreen = "/cowsale";
   static const String otpscreen = "/otp";
-  static const String useraccount = "/user-account";
+  // static const String useraccount = "/user-account";
   static const String editprofile = "/edit-profile";
 
   GoRouter get router => _goRouter;
@@ -30,21 +33,18 @@ class Routes {
         builder: (context, state) => const GetOtpScreen(),
       ),
       GoRoute(
-        path: useraccount,
+        path: useraccountscreen,
         builder: (context, state) => const UserAccountScreen(),
       ),
       GoRoute(
-        path: editprofile,
-        builder: (context, state) => const EditProfileScreen(),
+        path: homeScreen,
+        builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
         path: editprofile,
         builder: (context, state) => const EditProfileScreen(),
       ),
-      GoRoute(
-        path: editprofile,
-        builder: (context, state) => const EditProfileScreen(),
-      ),
+      
     ],
   );
 }
