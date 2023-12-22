@@ -12,7 +12,7 @@ class MerchantScreen extends StatefulWidget {
   State<MerchantScreen> createState() => _MerchantScreenState();
 }
 
-List<String> cowname1 = [
+List<String> dist = [
   "जिल्हा निवडा",
   "अहमदनगर",
   "धुळे",
@@ -20,7 +20,7 @@ List<String> cowname1 = [
   "जळगाव",
   "नाशिक"
 ];
-List<String> cowname2 = [
+List<String> subdist = [
   "तालुका निवडा",
   "अकोले",
   "जामखेड",
@@ -38,7 +38,7 @@ List<String> cowname2 = [
   "श्रीगोंदा"
 ];
 
-List<String> cowname3 = [
+List<String> malname = [
   "माल निवडा",
   "कांदा",
   "बटाटा",
@@ -113,12 +113,12 @@ class _MerchantScreenState extends State<MerchantScreen> {
               children: [
                 DropdownWidget(
                   items: [
-                    cowname1[0],
-                    cowname1[1],
-                    cowname1[2],
-                    cowname1[3],
-                    cowname1[4],
-                    cowname1[5],
+                    dist[0],
+                    dist[1],
+                    dist[2],
+                    dist[3],
+                    dist[4],
+                    dist[5],
                   ],
                   selectedValue: dropdownValue1,
                   onChanged: (String? newValue) {
@@ -129,50 +129,54 @@ class _MerchantScreenState extends State<MerchantScreen> {
                 ),
                 DropdownWidget(
                   items: [
-                    cowname2[0],
-                    cowname2[1],
-                    cowname2[2],
-                    cowname2[3],
-                    cowname2[4],
-                    cowname2[5],
-                    cowname2[6],
-                    cowname2[7],
-                    cowname2[8],
-                    cowname2[9],
-                    cowname2[10],
-                    cowname2[11],
-                    cowname2[12],
-                    cowname2[13],
-                    cowname2[14],
+                    subdist[0],
+                    subdist[1],
+                    subdist[2],
+                    subdist[3],
+                    subdist[4],
+                    subdist[5],
+                    subdist[6],
+                    subdist[7],
+                    subdist[8],
+                    subdist[9],
+                    subdist[10],
+                    subdist[11],
+                    subdist[12],
+                    subdist[13],
+                    subdist[14],
                   ],
                   selectedValue: dropdownValue2,
                   onChanged: (String? newValue) {
-                    setState(() {
-                      dropdownValue2 = newValue ?? '';
-                    });
+                    setState(
+                      () {
+                        dropdownValue2 = newValue ?? '';
+                      },
+                    );
                   },
                 ),
                 DropdownWidget(
                   items: [
-                    cowname3[0],
-                    cowname3[1],
-                    cowname3[2],
-                    cowname3[3],
-                    cowname3[4],
-                    cowname3[5],
-                    cowname3[6],
-                    cowname3[7],
-                    cowname3[8],
-                    cowname3[9],
-                    cowname3[10],
-                    cowname3[11],
-                    cowname3[12],
+                    malname[0],
+                    malname[1],
+                    malname[2],
+                    malname[3],
+                    malname[4],
+                    malname[5],
+                    malname[6],
+                    malname[7],
+                    malname[8],
+                    malname[9],
+                    malname[10],
+                    malname[11],
+                    malname[12],
                   ],
                   selectedValue: dropdownValue3,
                   onChanged: (String? newValue) {
-                    setState(() {
-                      dropdownValue3 = newValue ?? '';
-                    });
+                    setState(
+                      () {
+                        dropdownValue3 = newValue ?? '';
+                      },
+                    );
                   },
                 ),
               ],
@@ -190,10 +194,12 @@ class _MerchantScreenState extends State<MerchantScreen> {
       child: Column(
         children: [
           Table(
-              border: TableBorder.all(color: AppColors.darkBlue),
-              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-              children: [
-                TableRow(decoration: const BoxDecoration(), children: [
+            border: TableBorder.all(color: AppColors.darkBlue),
+            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+            children: [
+              TableRow(
+                decoration: const BoxDecoration(),
+                children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TableCell(
@@ -227,213 +233,230 @@ class _MerchantScreenState extends State<MerchantScreen> {
                       ),
                     ),
                   ),
-                ]),
-                ...List.generate(
-                    1,
-                    (index) => TableRow(children: [
-                          TableCell(
-                            child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    TextWidget(
-                                      data: AppStrings.babasaheb,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: Theme.of(context).shadowColor,
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.navle,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
+                ],
+              ),
+              ...List.generate(
+                1,
+                (index) => TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            TextWidget(
+                              data: AppStrings.babasaheb,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).shadowColor,
                             ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.mala,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                        ])),
-                ...List.generate(
-                    1,
-                    (index) => TableRow(children: [
-                          TableCell(
-                            child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    TextWidget(
-                                      data: AppStrings.mansukh,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: Theme.of(context).shadowColor,
-                                    ),
-                                  ],
-                                )
-                                //Text(AppStrings.babasaheb),
-                                ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.bhandari,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.malb,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                        ])),
-                ...List.generate(
-                    1,
-                    (index) => TableRow(children: [
-                          TableCell(
-                            child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    TextWidget(
-                                      data: AppStrings.rsik,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: Theme.of(context).shadowColor,
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.bagvan,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.malc,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                        ])),
-                ...List.generate(
-                    1,
-                    (index) => TableRow(children: [
-                          TableCell(
-                            child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    TextWidget(
-                                      data: AppStrings.sonwane,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: Theme.of(context).shadowColor,
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.sonwanea,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                          TableCell(
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: TextWidget(
-                                data: AppStrings.mald,
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Theme.of(context).shadowColor,
-                              ),
-                            ),
-                          ),
-                        ])),
-                ...List.generate(
-                  1,
-                  (index) => TableRow(
-                    children: [
-                      TableCell(
-                        child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                TextWidget(
-                                  data: AppStrings.satish,
-                                  fontSize: 15.sp,
-                                  fontWeight: FontWeight.bold,
-                                  color: Theme.of(context).shadowColor,
-                                ),
-                              ],
-                            )),
-                      ),
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: TextWidget(
-                            data: AppStrings.bhandari,
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).shadowColor,
-                          ),
+                          ],
                         ),
                       ),
-                      TableCell(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: TextWidget(
-                            data: AppStrings.mald,
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
-                            color: Theme.of(context).shadowColor,
-                          ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.navle,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.mala,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ]),
+              ),
+              ...List.generate(
+                1,
+                (index) => TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            TextWidget(
+                              data: AppStrings.mansukh,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.bhandari,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.malb,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ...List.generate(
+                1,
+                (index) => TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            TextWidget(
+                              data: AppStrings.rsik,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.bagvan,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.malc,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ...List.generate(
+                1,
+                (index) => TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            TextWidget(
+                              data: AppStrings.sonwane,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.sonwanea,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.mald,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ...List.generate(
+                1,
+                (index) => TableRow(
+                  children: [
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            TextWidget(
+                              data: AppStrings.satish,
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.bold,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.bhandari,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                    TableCell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextWidget(
+                          data: AppStrings.mald,
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).shadowColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     ));
