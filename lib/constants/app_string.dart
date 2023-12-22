@@ -69,4 +69,27 @@ class AppStrings {
   static const String setting = "Setting";
   static const String notifiacation = "Notification";
   static const String refer = "Refer";
+  static const String vyaparivarg = "व्यापारी वर्ग ";
+  static const String sangamner = "संगमनेर";
+  static const String sirioulnumber = "अ.नं";
+  static const String vyaparyachenav = "व्यापाऱ्याचे नाव";
+  static const String comapnyname = "कंपनी नाव";
+  static const String malachenav = "मालाचे नाव";
+  static const String babasaheb = "मनसुख भंडारी";
+  static const String mansukh = "बाबासो नवले";
+  static const String rsik = "रसिक बागवान ";
+  static const String satish = "सतीश भंडारी";
+  static const String sonwane = "सोनवणे ";
+  static const String navle = "4000";
+  static const String bhandari = "3500";
+  static const String bagvan = "3600";
+  static const String sonwanea = "4500";
+  static const String kiman = "कमाल";
+  static const String kmal = "किमान";
+  static const String sarasari = "सरासरी";
+  static const String mala = "5000";
+  static const String malb = "4500";
+  static const String malc = "4300";
+  static const String mald = "5000";
+  static const String male = "4500";
 }

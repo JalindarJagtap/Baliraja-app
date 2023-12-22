@@ -14,5 +14,6 @@ class AppColors {
   static const Color textGrey = Color.fromARGB(255, 59, 59, 59);
 
   //Icon color
-  static const Color locationicon=Color.fromARGB(255, 221, 22, 8);
+  static const Color locationicon = Color.fromARGB(255, 221, 22, 8);
+  static const Color textblue = Color.fromARGB(255, 195, 239, 241);
 }
