@@ -1,4 +1,5 @@
 import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
+import 'package:baliraja/presentatioin/merchand_screen/merchand_screen.dart';
 import 'package:baliraja/presentatioin/otp_screen/otp_screen.dart';
 import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
 import 'package:baliraja/presentatioin/home_screen/home_screen.dart';
@@ -15,6 +16,8 @@ class Routes {
   static const String otpscreen = "/otp";
   static const String userprofile = "/user-profile";
   static const String editprofile = "/edit-profile";
+  static const String merchantscreen= "/merchantscreen";
+
 
   GoRouter get router => _goRouter;
 
@@ -47,6 +50,9 @@ class Routes {
       ),
       GoRoute(path: userprofile ,
        builder: (context, state) => const User_Profile_Screen (),
+      ),
+      GoRoute(path: merchantscreen ,
+       builder: (context, state) => const MerchantScreen (),
       )
       
     ],
