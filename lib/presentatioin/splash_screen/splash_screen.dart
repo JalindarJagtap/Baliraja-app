@@ -1,4 +1,5 @@
 import 'package:baliraja/constants/app_colors.dart';
+import 'package:baliraja/constants/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,8 +33,8 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset("Images/splashimage.png"),
-            Image.asset("Images/balirajasplashimage.png"),
+            Image.asset(AppImages.splashimage),
+            Image.asset(AppImages.balirajasplash),
           ],
         ),
       ),
