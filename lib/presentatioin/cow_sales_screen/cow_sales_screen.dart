@@ -40,7 +40,7 @@ class _CowSalesState extends State<CowSales> {
               context: context,
               data: AppStrings.gaivikri,
               color: Theme.of(context).shadowColor,
-              fontSize: AppSizes.const20pxTextSize,
+              fontSize: AppSizes.const20pxTextSize, hintText: '',
             ),
           ),
           actions: const [
@@ -65,7 +65,7 @@ class _CowSalesState extends State<CowSales> {
                       context: context,
                       data: AppStrings.gainivada,
                       fontSize: AppSizes.medium14pxTextSize,
-                      color: Theme.of(context).shadowColor,
+                      color: Theme.of(context).shadowColor, hintText: '',
                     ),
                     Icon(
                       Icons.star,
@@ -103,7 +103,7 @@ class _CowSalesState extends State<CowSales> {
                       context: context,
                       data: AppStrings.vet,
                       fontSize: AppSizes.medium14pxTextSize,
-                      color: Theme.of(context).shadowColor,
+                      color: Theme.of(context).shadowColor, hintText: '',
                     ),
                     Icon(
                       Icons.star,
@@ -140,7 +140,7 @@ class _CowSalesState extends State<CowSales> {
                       context: context,
                       data: AppStrings.gaichedudh,
                       fontSize: AppSizes.medium14pxTextSize,
-                      color: Theme.of(context).shadowColor,
+                      color: Theme.of(context).shadowColor, hintText: '',
                     ),
                     Icon(
                       Icons.star,
@@ -155,7 +155,7 @@ class _CowSalesState extends State<CowSales> {
                 TextFormFieldWidget(
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.heavy18pxTextSize,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.bold, decoration: InputDecoration(),
                 ),
                    SizedBox(
                   height: 12.h,
@@ -167,7 +167,7 @@ class _CowSalesState extends State<CowSales> {
                       context: context,
                       data: AppStrings.dudhachishamata,
                       fontSize: AppSizes.medium14pxTextSize,
-                      color: Theme.of(context).shadowColor,
+                      color: Theme.of(context).shadowColor, hintText: '',
                     ),
                     Icon(
                       Icons.star,
@@ -180,6 +180,7 @@ class _CowSalesState extends State<CowSales> {
                   height: 7.h,
                 ),
                 TextFormFieldWidget(
+                  decoration: InputDecoration(),
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
@@ -194,7 +195,7 @@ class _CowSalesState extends State<CowSales> {
                       context: context,
                       data: AppStrings.kimat,
                       fontSize: AppSizes.medium14pxTextSize,
-                      color: Theme.of(context).shadowColor,
+                      color: Theme.of(context).shadowColor, hintText: '',
                     ),
                     Icon(
                       Icons.star,
@@ -207,6 +208,7 @@ class _CowSalesState extends State<CowSales> {
                   height: 7.h,
                 ),
                 TextFormFieldWidget(
+                  decoration: InputDecoration(),
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
                 ),

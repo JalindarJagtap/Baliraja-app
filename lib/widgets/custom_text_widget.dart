@@ -8,7 +8,7 @@ class TextWidget extends StatelessWidget {
     this.data,
     this.fontWeight,
     this.color,
-    this.fontSize,
+    this.fontSize, required String hintText,
   });
 
   final BuildContext? context;

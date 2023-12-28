@@ -31,19 +31,19 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                       data: AppStrings.varificationCode,
                       fontSize: 28.sp,
                       color: AppColors.blackColor,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold, hintText: '',),
                 ),
                 Column(
                   children: [
                     TextWidget(
                       data: AppStrings.pleaseEnterYour,
                       color: AppColors.blackColor,
-                      fontSize: 22.sp,
+                      fontSize: 22.sp, hintText: '',
                     ),
                     TextWidget(
                       data: AppStrings.otp,
                       fontSize: 22.sp,
-                      color: AppColors.blackColor,
+                      color: AppColors.blackColor, hintText: '',
                     ),
                     SizedBox(
                       height: 40.h,
@@ -53,7 +53,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                         context: context,
                         data: AppStrings.obsureOtpText,
                         fontSize: 30.sp,
-                        color: Theme.of(context).shadowColor,
+                        color: Theme.of(context).shadowColor, hintText: '',
                       ),
                       inputFormatters: [
                         LengthLimitingTextInputFormatter(4),
@@ -96,7 +96,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                         TextWidget(
                           data: AppStrings.resendIn,
                           fontSize: 22.sp,
-                          color: AppColors.blackColor,
+                          color: AppColors.blackColor, hintText: '',
                         ),
                         const SizedBox(
                           width: 20,
@@ -104,7 +104,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                         TextWidget(
                           data: AppStrings.otpTime,
                           fontSize: 22.sp,
-                          color: AppColors.blackColor,
+                          color: AppColors.blackColor, hintText: '',
                         )
                       ],
                     ),

@@ -70,7 +70,7 @@ class _OutlineButtonWidgetState extends State<OutlineButtonWidget> {
                   data: widget.text,
                   fontSize: widget.labelFontSize,
                   color: Theme.of(context).shadowColor,
-                  fontWeight: widget.fontWeight,
+                  fontWeight: widget.fontWeight, hintText: '',
                 ),
                 widget.isBackArrow ?? false
                     ? Row(

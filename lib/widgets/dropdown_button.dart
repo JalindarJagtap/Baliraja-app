@@ -28,7 +28,10 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
   Widget build(BuildContext context) {
     return DropdownButtonHideUnderline(
       child: InputDecorator(
+        
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
           contentPadding:
               EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
           border: OutlineInputBorder(

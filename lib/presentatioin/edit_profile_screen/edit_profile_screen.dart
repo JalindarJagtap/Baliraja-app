@@ -3,6 +3,7 @@ import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/button_widget.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:baliraja/widgets/dropdown_button.dart';
+import 'package:baliraja/widgets/textform_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,15 +25,26 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
-          child: Column(
-            children: [
-              _customheaderRow(context),
-              const CircleAvatar(),
-              _customtextfield(context),
-              _customOutlinedButton(context),
-            ],
+        child: Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage('assets/Images/backgroundimage.png'),
+                  fit: BoxFit.cover)),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 25),
+            child: Column(
+              children: [
+                _customheaderRow(context),
+                const CircleAvatar(
+                  maxRadius: 65,
+                  backgroundImage: AssetImage(
+                    "assets/Images/baliraja.png",
+                  ),
+                ),
+                _customtextfield(context),
+                _customOutlinedButton(context),
+              ],
+            ),
           ),
         ),
       ),
@@ -42,14 +54,19 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   _customheaderRow(BuildContext context) {
     return Row(
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.arrow_back),
+        IconButton(color: Colors.white,
+          onPressed: () {
+            
+          },
+          icon: const Icon(Icons.arrow_back_ios),
         ),
-        SizedBox(width: 100.w),
-        TextWidget(
+        SizedBox(width: 52.w),
+         TextWidget(
+          context: context,
+            hintText: "hello",
           data: AppStrings.editProfile,
-          color: Colors.black38,
+          fontSize: 25,
+          color: Colors.white,
         ),
       ],
     );
@@ -57,31 +74,20 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   _customtextfield(BuildContext context) {
     return Column(children: [
-      TextField(
-        decoration: InputDecoration(
-          hintText: AppStrings.enteryourname,
-          hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-          ),
-        ),
-      ),
+   
+  
+  TextFormFieldWidget(
+    decoration: InputDecoration(),
+    hintText:AppStrings.enteryourname,
+  ),
       SizedBox(
         height: 10.h,
       ),
-      // TextField(
-      //   decoration: InputDecoration(
-      //     hintText: AppStrings.enteryourphonenumber,
-      //     hintStyle: TextStyle(fontSize: 20, color: AppColors.blackColor),
-      //     border: OutlineInputBorder(
-      //       borderRadius: BorderRadius.circular(10),
-      //     ),
-      //   ),
-      // ),
       SizedBox(
         height: 10.h,
       ),
       CustomDropdownButton(
+        
         items: [
           man[0],
           man[1],
@@ -99,26 +105,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       SizedBox(
         height: 10.h,
       ),
-      TextField(
-        decoration: InputDecoration(
-          hintText: AppStrings.enteryourege,
-          hintStyle: TextStyle(color: AppColors.blackColor),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.r)),
-        ),
-      ),
+      TextFormFieldWidget(
+    decoration: InputDecoration(),
+    hintText:AppStrings.enteryourege,
+  ),
       SizedBox(
         height: 10.h,
       ),
-      TextField(
-        decoration: InputDecoration(
-          hintText: AppStrings.enteryourvilage,
-          hintStyle: TextStyle(color: Colors.black, fontSize: 25.sp),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.r)),
-        ),
-      ),
-      SizedBox(
-        height: 25.h,
-      ),
+ 
     ]);
   }
 
