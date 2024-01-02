@@ -39,6 +39,7 @@ class AppStrings {
   static const String done = "Done";
   static const String resendIn = "Resend in";
   static const String otp = "OTP";
+  static const String sendotp = " Send OTP";
   static const String obsureOtpText = "●";
   static const String otpTime = "00:45";
   static const String firstname = "पहिले नाव";
@@ -92,4 +93,7 @@ class AppStrings {
   static const String malc = "4300";
   static const String mald = "5000";
   static const String male = "4500";
+  static const String enteryouremail = "Enter your email";
+  static const String enteryourvalidpassword = "Enter your valid password";
+  
 }
