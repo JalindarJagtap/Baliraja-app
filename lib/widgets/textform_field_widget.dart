@@ -56,7 +56,7 @@ class TextFormFieldWidget extends StatelessWidget {
         labelText: lableText,
         labelStyle: const TextStyle(color: AppColors.blackColor),
         filled: true,
-        fillColor: AppColors.graywhiteColor,
+        fillColor: AppColors.whiteColor,
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: AppColors.blackColor),
           borderRadius: borderRadius ?? BorderRadius.zero,

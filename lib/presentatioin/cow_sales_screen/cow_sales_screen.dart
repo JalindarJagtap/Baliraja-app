@@ -3,6 +3,7 @@ import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:baliraja/widgets/dropdown_button.dart';
 import 'package:baliraja/widgets/textform_field_widget.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -63,7 +64,7 @@ class _CowSalesState extends State<CowSales> {
           padding: EdgeInsets.symmetric(horizontal: 23.w, vertical: 10.h),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
@@ -160,8 +161,9 @@ class _CowSalesState extends State<CowSales> {
                 ),
                 TextFormFieldWidget(
                   hintText: AppStrings.dahaliter,
-                  fontSize: AppSizes.heavy18pxTextSize,
+                  fontSize: AppSizes.horizontalScreen12pxPaddingPhone,
                   fontWeight: FontWeight.bold,
+                  
                 ),
                 SizedBox(
                   height: 12.h,
@@ -187,8 +189,9 @@ class _CowSalesState extends State<CowSales> {
                 ),
                 TextFormFieldWidget(
                   hintText: AppStrings.dahaliter,
-                  fontSize: AppSizes.heavy18pxTextSize,
+                  fontSize: AppSizes.horizontalScreen12pxPaddingPhone,
                   fontWeight: FontWeight.bold,
+                 
                 ),
                 SizedBox(
                   height: 12.h,
@@ -213,14 +216,120 @@ class _CowSalesState extends State<CowSales> {
                   height: 7.h,
                 ),
                 TextFormFieldWidget(
-                  fontSize: AppSizes.heavy18pxTextSize,
+                  fontSize: AppSizes.horizontalScreen12pxPaddingPhone,
                   fontWeight: FontWeight.bold,
                 ),
                 SizedBox(
-                  height: 7.h,
+                  height: 17.h,
                 ),
                 Divider(
                   color: Theme.of(context).shadowColor,
+                ),
+                SizedBox(
+                  height: 15.h,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    DottedBorder(
+                      color: Colors.black,
+                      strokeWidth: 2.w,
+                      dashPattern: [3.h, 5.w],
+                      // ignore: sized_box_for_whitespace
+                      child: Container(
+                        height: 150.h,
+                        width: 250.w,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.video_camera_back_outlined, size: 50.sp),
+                            TextWidget(
+                              context: context,
+                              data: "व्हिडिओ घ्या",
+                              fontSize: 20.sp,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12.h,
+                    ),
+                    DottedBorder(
+                      color: Colors.black,
+                      strokeWidth: 2.w,
+                      dashPattern: [3.h, 5.w],
+                      // ignore: sized_box_for_whitespace
+                      child: Container(
+                        height: 150.h,
+                        width: 250.w,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.photo, size: 50.sp),
+                            TextWidget(
+                              context: context,
+                              data: "फोटो घ्या ",
+                              fontSize: 20.sp,
+                              color: Theme.of(context).shadowColor,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 12.h,
+                ),
+                Divider(
+                  color: Theme.of(context).shadowColor,
+                ),
+                SizedBox(
+                  height: 12.h,
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 40.h,
+                      width: 350.w,
+                      color: Colors.amber,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextWidget(
+                            data: "अधिक माहिती टाका ",
+                            color: Theme.of(context).shadowColor,
+                            fontSize: 20.sp,
+                          ),
+                          SizedBox(
+                            width: 5.w,
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_down,
+                            size: 25.sp,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20.h),
+                    Container(
+                      height: 40.h,
+                      width: 350.w,
+                      color: const Color.fromARGB(255, 89, 210, 244),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextWidget(
+                            data: "समाविष्ट करा",
+                            color: Theme.of(context).shadowColor,
+                            fontSize: 20.sp,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
