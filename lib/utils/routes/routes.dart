@@ -12,7 +12,7 @@ class Routes {
     routes: [
       // GoRoute(
       //   path: splashScreen,
-      //   builder: (context, state) => const SplashScreen(),
+      //   builder: (context, state) => SplashScreen(),
       // ),
       GoRoute(
         path: verificationScreen,

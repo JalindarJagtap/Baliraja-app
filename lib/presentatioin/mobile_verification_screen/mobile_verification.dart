@@ -4,7 +4,6 @@ import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -50,7 +49,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 color: AppColors.blackColor,
               ),
               TextWidget(
-                context: context,
+                context: context,  
                 data: AppStrings.onyournumber,
                 fontSize: AppSizes.heavy18pxTextSize,
                 color: AppColors.blackColor,
@@ -79,7 +78,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       decoration: const InputDecoration(
                         prefixText: AppStrings.india,
                         filled: true,
-                        fillColor: AppColors.cyan,
+                        fillColor: Color.fromARGB(255, 204, 243, 248),
                       ),
                     ),
                   ],
@@ -98,7 +97,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {}, 
                   child: TextWidget(
                     context: context,
                     data: AppStrings.getOtp,
