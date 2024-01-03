@@ -59,7 +59,6 @@ class Routes {
       GoRoute(path: emailvarification ,
        builder: (context, state) => const EmailVarificationScreen (),
       ),
-      
     ],
   );
 }
