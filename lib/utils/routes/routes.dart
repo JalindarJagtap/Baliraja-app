@@ -19,7 +19,7 @@ class Routes {
   GoRouter get router => _goRouter;
 
   late final GoRouter _goRouter = GoRouter(
-    initialLocation: splashScreen,
+    initialLocation: homeScreen,
     routes: [
       GoRoute(
         path: splashScreen,
@@ -45,10 +45,10 @@ class Routes {
         path: editprofile,
         builder: (context, state) => const EditProfileScreen(),
       ),
-      GoRoute(path: userprofile ,
-       builder: (context, state) => const User_Profile_Screen (),
+      GoRoute(
+        path: userprofile,
+        builder: (context, state) => const User_Profile_Screen(),
       )
-      
     ],
   );
 }
