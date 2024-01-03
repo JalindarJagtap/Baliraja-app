@@ -18,6 +18,8 @@ class TextFormFieldWidget extends StatelessWidget {
     this.height,
     this.lableText,
     this.suffix,
+    this.suffixicon,
+    this.borderRadius,
   }) : super(key: key);
 
   final String? hintText;
@@ -32,6 +34,9 @@ class TextFormFieldWidget extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final double? height;
   final String? suffix;
+  final BorderRadius? borderRadius;
+  final Widget? suffixicon;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -52,15 +57,18 @@ class TextFormFieldWidget extends StatelessWidget {
         labelStyle: const TextStyle(color: AppColors.blackColor),
         filled: true,
         fillColor: AppColors.graywhiteColor,
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.blackColor),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: AppColors.blackColor),
+          borderRadius: borderRadius ?? BorderRadius.zero,
         ),
-        border: const OutlineInputBorder(),
+        border:
+            OutlineInputBorder(borderRadius: borderRadius ?? BorderRadius.zero),
         hintStyle: GoogleFonts.kumbhSans(
           fontWeight: fontWeight,
           color: color ?? Theme.of(context).shadowColor,
           fontSize: fontSize,
         ),
+        suffixIcon: suffixicon,
       ),
     );
   }
