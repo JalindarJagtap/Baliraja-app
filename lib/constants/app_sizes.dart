@@ -12,6 +12,7 @@ class AppSizes {
   static double const20pxTextSize = 20.0;
   static double const21pxTextSize = 21.0;
   static double const38pxTextSize = 36.0;
+   static double xxl30pxTextSize = 30.0;
 
   // screen padding for phone
   static double horizontalScreen25pxPaddingPhone = 25.0;

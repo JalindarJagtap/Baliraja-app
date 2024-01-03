@@ -29,8 +29,13 @@ class MyApp extends StatelessWidget {
           routeInformationProvider: appRoutes.router.routeInformationProvider,
           routerDelegate: appRoutes.router.routerDelegate,
         );
+        
       },
+      
+    
     );
+    
   }
+
 }
  
