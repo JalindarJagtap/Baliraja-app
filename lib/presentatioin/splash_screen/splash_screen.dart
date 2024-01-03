@@ -1,4 +1,6 @@
 import 'package:baliraja/constants/app_colors.dart';
+import 'package:baliraja/constants/app_images.dart';
+import 'package:baliraja/utils/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
       const Duration(seconds: 2),
     );
     // ignore: use_build_context_synchronously
-    GoRouter.of(context).pushReplacement("/cowsale");
+    GoRouter.of(context).pushReplacement(Routes.homeScreen);
   }
 
   @override
@@ -32,8 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset("Images/splashimage.png"),
-            Image.asset("Images/balirajasplashimage.png"),
+            Image.asset(AppImages.splashImg),
+            Image.asset(AppImages.balirajsSplashImg),
           ],
         ),
       ),

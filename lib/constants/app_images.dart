@@ -8,4 +8,8 @@ class AppImages {
   static const nature5 = "assets/Images/nature5.png";
   static const nature6 = "assets/Images/nature6.png";
   static const balirajaImg = "assets/Images/baliraja.png";
+  static const splashImg="assets/Images/splashimage.png";
+  static const balirajsSplashImg="assets/Images/balirajasplashimage.png";
+
+
 }
