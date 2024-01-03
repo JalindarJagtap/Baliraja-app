@@ -8,11 +8,12 @@ class AppColors {
   static const Color grayColor = Color(0XFF707070);
   static const Color graywhiteColor = Color(0xFFE6E2E2);
   static const Color blackColor = Color(0XFF000000);
-
+  static const Color greycallcolor = Color.fromARGB(255, 204, 202, 202);
+  static const Color greencolor = Color.fromARGB(255, 96, 192, 99);
   // textformfield color
   static const Color textformFieldColor = Color(0XFF707070);
   static const Color textGrey = Color.fromARGB(255, 59, 59, 59);
 
   //Icon color
-  static const Color locationicon=Color.fromARGB(255, 221, 22, 8);
+  static const Color locationicon = Color.fromARGB(255, 221, 22, 8);
 }

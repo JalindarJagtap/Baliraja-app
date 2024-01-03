@@ -61,7 +61,7 @@ class AppStrings {
   static const String cowinfo =
       "ती दुसन्या दुग्धपानात आहे. आणि २० लिटर दूध देते.";
   static const String cowinfoall =
-      "ही जर्शी गाय ३ वर्षांची आहे. ती दुसन्या दुग्धपानात आहे,\n आणि सध्या 20 लिटर दूध देते";
+      "ही जर्शी गाय ३ वर्षांची आहे. ती दुसन्या दुग्धपानात आहे, आणि सध्या 20 लिटर दूध देते";
   static const String sellertext = "धोंडीराव";
   static const String phonetext = "संपर्क करा";
   static const String username = "Tushar Dushing";
