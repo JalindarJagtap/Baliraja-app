@@ -50,10 +50,15 @@ class Routes {
         path: editprofile,
         builder: (context, state) => const EditProfileScreen(),
       ),
-      GoRoute(
-        path: userprofile,
-        builder: (context, state) => const User_Profile_Screen(),
-      )
+      GoRoute(path: userprofile ,
+       builder: (context, state) => const User_Profile_Screen (),
+      ),
+      GoRoute(path: merchantscreen ,
+       builder: (context, state) => const MerchantScreen (),
+      ),
+      GoRoute(path: emailvarification ,
+       builder: (context, state) => const EmailVarificationScreen (),
+      ),
     ],
   );
 }
