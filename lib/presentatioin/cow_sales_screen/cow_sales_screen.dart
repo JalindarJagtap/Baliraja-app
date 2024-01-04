@@ -76,7 +76,7 @@ class _CowSalesState extends State<CowSales> {
                     ),
                     Icon(
                       Icons.star,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.red,
                       size: 10.sp,
                     ),
                   ],
@@ -114,7 +114,7 @@ class _CowSalesState extends State<CowSales> {
                     ),
                     Icon(
                       Icons.star,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.red,
                       size: 10.sp,
                     ),
                   ],
@@ -151,7 +151,7 @@ class _CowSalesState extends State<CowSales> {
                     ),
                     Icon(
                       Icons.star,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.red,
                       size: 10.sp,
                     ),
                   ],
@@ -163,7 +163,6 @@ class _CowSalesState extends State<CowSales> {
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.horizontalScreen12pxPaddingPhone,
                   fontWeight: FontWeight.bold,
-                  
                 ),
                 SizedBox(
                   height: 12.h,
@@ -179,7 +178,7 @@ class _CowSalesState extends State<CowSales> {
                     ),
                     Icon(
                       Icons.star,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.red,
                       size: 10.sp,
                     ),
                   ],
@@ -191,7 +190,6 @@ class _CowSalesState extends State<CowSales> {
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.horizontalScreen12pxPaddingPhone,
                   fontWeight: FontWeight.bold,
-                 
                 ),
                 SizedBox(
                   height: 12.h,
@@ -207,7 +205,7 @@ class _CowSalesState extends State<CowSales> {
                     ),
                     Icon(
                       Icons.star,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.red,
                       size: 10.sp,
                     ),
                   ],
@@ -291,28 +289,6 @@ class _CowSalesState extends State<CowSales> {
                 ),
                 Column(
                   children: [
-                    Container(
-                      height: 40.h,
-                      width: 350.w,
-                      color: Colors.amber,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextWidget(
-                            data: "अधिक माहिती टाका ",
-                            color: Theme.of(context).shadowColor,
-                            fontSize: 20.sp,
-                          ),
-                          SizedBox(
-                            width: 5.w,
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down,
-                            size: 25.sp,
-                          )
-                        ],
-                      ),
-                    ),
                     SizedBox(height: 20.h),
                     Container(
                       height: 40.h,
@@ -322,7 +298,7 @@ class _CowSalesState extends State<CowSales> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextWidget(
-                            data: "समाविष्ट करा",
+                            data: "समाविष्ट करा .",
                             color: Theme.of(context).shadowColor,
                             fontSize: 20.sp,
                           ),
@@ -330,6 +306,9 @@ class _CowSalesState extends State<CowSales> {
                       ),
                     ),
                   ],
+                ),
+                  SizedBox(
+                  height: 12.h,
                 ),
               ],
             ),
