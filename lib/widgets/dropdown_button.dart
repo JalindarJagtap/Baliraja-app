@@ -17,6 +17,7 @@ class CustomDropdownButton extends StatefulWidget {
     this.color,
     this.fontWeight,
     this.fontSize,
+        
   });
 
   @override
@@ -30,6 +31,7 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
       child: InputDecorator(
         
         decoration: InputDecoration(
+       
           filled: true,
           fillColor: Colors.white,
           contentPadding:

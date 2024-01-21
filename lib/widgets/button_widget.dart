@@ -33,7 +33,9 @@ class OutlineButtonWidget extends StatefulWidget {
       this.fontWeight,
       this.buttonWidth,
       this.buttonHeight,
-      this.isBackArrow});
+      this.isBackArrow,
+      
+      });
 
   @override
   State<OutlineButtonWidget> createState() => _OutlineButtonWidgetState();
