@@ -88,6 +88,35 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           hintText: AppStrings.enteryourname,
         ),
       ),
+<<<<<<< HEAD
+=======
+
+// Padding(
+//   padding: const EdgeInsets.only(top: 35),
+//   child: TextFormFieldWidget(
+//     decoration: InputDecoration(
+//       filled: true, // Set to true to enable background color
+//       fillColor: Color.fromARGB(255, 59, 59, 59), // Set the background color
+//       hintText: AppStrings.enteryourname,
+//       // You can customize other properties like border, content padding, etc.
+//       border: OutlineInputBorder(
+//         borderRadius: BorderRadius.circular(10),
+//         borderSide: BorderSide.none, // Remove the border
+//       ),
+//       contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+//     ),
+//   ),
+// ),
+
+
+
+
+
+
+
+
+
+>>>>>>> 03c85bbc36718b32fb9e224cfa9bee8cac9c80d5
       SizedBox(
         height: 10.h,
       ),
@@ -112,8 +141,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       SizedBox(
         height: 10.h,
       ),
+<<<<<<< HEAD
       const Padding(
         padding: EdgeInsets.only(top: 20),
+=======
+      Padding(
+        padding: const EdgeInsets.only(top: 20),
+>>>>>>> 03c85bbc36718b32fb9e224cfa9bee8cac9c80d5
         child: TextFormFieldWidget(
           decoration: InputDecoration(),
           hintText: AppStrings.enteryourege,
