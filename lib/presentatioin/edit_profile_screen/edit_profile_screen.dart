@@ -14,13 +14,13 @@ class EditProfileScreen extends StatefulWidget {
 }
 
 List<String> man = [
-  "लिंग ",
-  "पुरुष ",
+  "लिंग",
+  "पुरुष",
   "महिला",
 ];
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
-  String? dropdownValue = "लिंग ";
+  String? dropdownValue = "लिंग";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   image: AssetImage('assets/Images/backgroundimage.png'),
                   fit: BoxFit.cover)),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 25),
+            padding: const EdgeInsets.symmetric(
+              vertical: 90,
+              horizontal: 25,
+            ),
             child: Column(
               children: [
                 _customheaderRow(context),
@@ -54,19 +57,23 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   _customheaderRow(BuildContext context) {
     return Row(
       children: [
-        IconButton(color: Colors.white,
-          onPressed: () {
-            
-          },
+        IconButton(
+          color: Colors.white,
+          onPressed: () {},
           icon: const Icon(Icons.arrow_back_ios),
         ),
-        SizedBox(width: 52.w),
-         TextWidget(
-          context: context,
+        SizedBox(
+          width: 52.w,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: TextWidget(
+            context: context,
             hintText: "hello",
-          data: AppStrings.editProfile,
-          fontSize: 25,
-          color: Colors.white,
+            data: AppStrings.editProfile,
+            fontSize: 25,
+            color: Colors.white,
+          ),
         ),
       ],
     );
@@ -74,12 +81,13 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   _customtextfield(BuildContext context) {
     return Column(children: [
-   
-  
-  TextFormFieldWidget(
-    decoration: InputDecoration(),
-    hintText:AppStrings.enteryourname,
-  ),
+      Padding(
+        padding: const EdgeInsets.only(top: 35),
+        child: TextFormFieldWidget(
+          decoration: InputDecoration(),
+          hintText: AppStrings.enteryourname,
+        ),
+      ),
       SizedBox(
         height: 10.h,
       ),
@@ -87,7 +95,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         height: 10.h,
       ),
       CustomDropdownButton(
-        
         items: [
           man[0],
           man[1],
@@ -97,7 +104,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         onChanged: (String? newValue) {
           setState(
             () {
-              dropdownValue = newValue ?? '111';
+              dropdownValue = newValue ?? '11';
             },
           );
         },
@@ -105,25 +112,30 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       SizedBox(
         height: 10.h,
       ),
-      TextFormFieldWidget(
-    decoration: InputDecoration(),
-    hintText:AppStrings.enteryourege,
-  ),
+      const Padding(
+        padding: EdgeInsets.only(top: 20),
+        child: TextFormFieldWidget(
+          decoration: InputDecoration(),
+          hintText: AppStrings.enteryourege,
+        ),
+      ),
       SizedBox(
         height: 10.h,
       ),
- 
     ]);
   }
 
   _customOutlinedButton(BuildContext context) {
-    return Container(
-      height: 30.h,
-      width: 120.w,
-      child: OutlineButtonWidget(
-        onPressed: () {},
-        borderRadius: 30,
-        text: AppStrings.OutlineButtonWidget,
+    return Padding(
+      padding: const EdgeInsets.only(top: 40),
+      child: Container(
+        height: 40.h,
+        width: 120.w,
+        child: OutlineButtonWidget(
+          onPressed: () {},
+          borderRadius: 20,
+          text: AppStrings.buttontext,
+        ),
       ),
     );
   }
