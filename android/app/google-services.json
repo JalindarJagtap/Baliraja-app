@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "657562198637",
+    "project_id": "balirajafirebase",
+    "storage_bucket": "balirajafirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657562198637:android:a60e00274940278f925564",
+        "android_client_info": {
+          "package_name": "com.example.baliraja"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD52VmvfUrrvh-VGmIeWWbV2zb9dYSGVZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

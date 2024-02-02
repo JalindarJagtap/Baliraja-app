@@ -1,9 +1,13 @@
 import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_sizes.dart';
 import 'package:baliraja/constants/app_string.dart';
+import 'package:baliraja/presentatioin/otp_screen/otp_screen.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
+import 'package:baliraja/widgets/textform_field_widget.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 class VerificationScreen extends StatefulWidget {
   const VerificationScreen({super.key});
@@ -13,11 +17,20 @@ class VerificationScreen extends StatefulWidget {
 }
 
 class _VerificationScreenState extends State<VerificationScreen> {
-  final TextEditingController _mobileController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController(text: "+91");
+  // final TextEditingController countrycode = TextEditingController(text: "+91");
+  @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   countrycode.text = "+91";
+  //   super.initState();
+  // }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: Container(
           width: double.infinity,
           decoration: const BoxDecoration(
@@ -28,7 +41,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
           child: Column(
             children: [
               Image.asset(
-                "Images/verification.png",
+                "assets/Images/verification.png",
                 height: 180.h,
                 width: 170.w,
               ),
@@ -49,7 +62,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 color: AppColors.blackColor,
               ),
               TextWidget(
-                context: context,  
+                context: context,
                 data: AppStrings.onyournumber,
                 fontSize: AppSizes.heavy18pxTextSize,
                 color: AppColors.blackColor,
@@ -71,15 +84,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
                         ),
                       ],
                     ),
-                    TextField(
-                      controller: _mobileController,
+                     TextFormField(
+                      // initialValue: "+91",
+                      controller: phoneController,
                       keyboardType: TextInputType.phone,
-                      maxLength: 10, // including "91"
-                      decoration: const InputDecoration(
-                        prefixText: AppStrings.india,
-                        filled: true,
-                        fillColor: Color.fromARGB(255, 204, 243, 248),
-                      ),
+                      // decoration:   InputDecoration(
+                      //   fillColor: Color.fromARGB(255, 204, 243, 248),
+                      // ),
                     ),
                   ],
                 ),
@@ -97,10 +108,30 @@ class _VerificationScreenState extends State<VerificationScreen> {
                       ),
                     ),
                   ),
-                  onPressed: () {}, 
+                  onPressed: () async {
+                    if (phoneController.text.isEmpty) {
+                      return;
+                    }
+
+                    await FirebaseAuth.instance.verifyPhoneNumber(
+                        verificationCompleted:
+                            (PhoneAuthCredential credential) {},
+                        verificationFailed: (FirebaseAuthException ex) {},
+                        codeSent: (String verificationId, int? resendtoken) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => GetOtpScreen(
+                                    verificationid: verificationId),
+                              ));
+                        },
+                        codeAutoRetrievalTimeout: (String verificationId) {},
+                        phoneNumber: phoneController.text.toString());
+                  },
                   child: TextWidget(
                     context: context,
-                    data: AppStrings.getOtp,
+                    data: "send Otp",
+                    // AppStrings.getOtp,
                     color: AppColors.black,
                     fontSize: AppSizes.xl24pxTextSize,
                   ),
