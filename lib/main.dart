@@ -6,14 +6,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:go_router/go_router.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: const  FirebaseOptions(
-    apiKey: "AIzaSyD52VmvfUrrvh-VGmIeWWbV2zb9dYSGVZE"  , 
-    appId: "1:657562198637:android:a60e00274940278f925564" , 
-    messagingSenderId:"657562198637"  , 
-    projectId:  "balirajafirebase",
-    ));
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+    apiKey: "AIzaSyD52VmvfUrrvh-VGmIeWWbV2zb9dYSGVZE",
+    appId: "1:657562198637:android:a60e00274940278f925564",
+    messagingSenderId: "657562198637",
+    projectId: "balirajafirebase",
+  ));
   usePathUrlStrategy();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   runApp(MyApp());
@@ -21,30 +22,22 @@ void main() async{
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  final appRoutes =Routes();
+  final appRoutes = Routes();
 
   @override
   Widget build(BuildContext context) {
-    return 
-    ScreenUtilInit(
+    return ScreenUtilInit(
       designSize: const Size(360, 740),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return 
-         MaterialApp.router(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           routeInformationParser: appRoutes.router.routeInformationParser,
           routeInformationProvider: appRoutes.router.routeInformationProvider,
           routerDelegate: appRoutes.router.routerDelegate,
         );
-        
       },
-      
-    
     );
-    
   }
-
 }
- 
