@@ -38,7 +38,7 @@ class Routes {
       ),
       GoRoute(
         path: otpscreen,
-        builder: (context, state) => const GetOtpScreen(),
+        builder: (context, state) =>   GetOtpScreen(verificationid:verification,),
       ),
       GoRoute(
         path: useraccountscreen,

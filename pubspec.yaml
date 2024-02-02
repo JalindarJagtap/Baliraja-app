@@ -44,6 +44,9 @@ dependencies:
   carousel_slider: ^4.2.1
   curved_labeled_navigation_bar: ^2.0.2
   dotted_border: ^2.1.0
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.16.0
+  intl_phone_field: ^3.2.0
 
 dev_dependencies:
   flutter_test:
