@@ -33,9 +33,7 @@ class AppStrings {
   static const String enteryourphonenumber = "Enteryourphonenumber";
   static const String enteryourege = "वय";
   static const String enteryourvilage = "गाव";
-
   static const String ling = "गाव";
-
   static const String varificationCode = "Varification Code";
   static const String pleaseEnterYour = "Please enter your";
   static const String done = "Done";

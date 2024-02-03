@@ -59,19 +59,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               vertical: 90,
               horizontal: 25,
             ),
-            child: Column(
-              children: [
-                _customheaderRow(context),
-                const CircleAvatar(
-                  maxRadius: 65,
-                  backgroundImage: AssetImage(
-                    "assets/Images/baliraja.png",
-                  ),
-                ),
-                _customtextfield(context),
-                _customOutlinedButton(context),
-              ],
-            ),
           ),
         ),
       ),
