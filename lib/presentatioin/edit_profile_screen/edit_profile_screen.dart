@@ -1,7 +1,6 @@
 import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/button_widget.dart';
-import 'package:baliraja/widgets/custom_text_widget.dart';
 import 'package:baliraja/widgets/dropdown_button.dart';
 import 'package:baliraja/widgets/textform_field_widget.dart';
 import 'package:flutter/material.dart';
@@ -54,8 +53,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               image: DecorationImage(
                   image: AssetImage('assets/Images/backgroundimage.png'),
                   fit: BoxFit.cover)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
+          child: const Padding(
+            padding: EdgeInsets.symmetric(
               vertical: 90,
               horizontal: 25,
             ),
@@ -66,8 +65,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 
   _customheaderRow(BuildContext context) {
-    return Row(
-      children: const [],
+    return const Row(
+      children: [],
     );
   }
 
@@ -81,7 +80,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
             filled: true,
           ),
           hintText: AppStrings.enteryourname,
-          style: const TextStyle(fontSize: 20),
+          style: TextStyle(fontSize: 20.sp),
         ),
       ),
       SizedBox(
