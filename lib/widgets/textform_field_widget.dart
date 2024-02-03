@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class TextFormFieldWidget extends StatelessWidget {
-  const TextFormFieldWidget({
+  TextFormFieldWidget({
     Key? key,
     this.controller,
     this.keyboardType = TextInputType.text,
@@ -17,10 +18,13 @@ class TextFormFieldWidget extends StatelessWidget {
     this.color,
     this.height,
     this.lableText,
-    this.suffix, required InputDecoration decoration,
+    this.style,
+    this.suffix,
+    required InputDecoration decoration,
   }) : super(key: key);
 
   final String? hintText;
+  TextStyle? style;
   final String? lableText;
   final FontWeight? fontWeight;
   final double? fontSize;
@@ -40,12 +44,13 @@ class TextFormFieldWidget extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       onChanged: onChanged,
-      style: GoogleFonts.kumbhSans(
-        fontWeight: fontWeight,
-        color: color ?? Theme.of(context).shadowColor,
-        fontSize: fontSize,
-        height: height,
-      ),
+      style: style ??
+          GoogleFonts.kumbhSans(
+            fontWeight: fontWeight,
+            color: color ?? Theme.of(context).shadowColor,
+            fontSize: fontSize,
+            height: height,
+          ),
       decoration: InputDecoration(
         hintText: hintText,
         labelText: lableText,

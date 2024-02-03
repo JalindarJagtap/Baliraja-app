@@ -10,6 +10,7 @@ class CustomDropdownButton extends StatefulWidget {
   final FontWeight? fontWeight;
   final double? fontSize;
 
+
   CustomDropdownButton({
     this.items,
     this.selectedValue,
@@ -17,6 +18,7 @@ class CustomDropdownButton extends StatefulWidget {
     this.color,
     this.fontWeight,
     this.fontSize,
+        
   });
 
   @override
@@ -30,6 +32,7 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
       child: InputDecorator(
         
         decoration: InputDecoration(
+       
           filled: true,
           fillColor: Colors.white,
           contentPadding:
@@ -43,7 +46,7 @@ class CustomDropdownButtonState extends State<CustomDropdownButton> {
           icon: const Icon(Icons.keyboard_arrow_down),
           iconSize: 28.sp,
           style: GoogleFonts.kumbhSans(
-            fontSize: 25.sp,
+            fontSize: 18.sp,
             fontWeight: FontWeight.w900,
           ),
           onChanged: (String? newValue) {
