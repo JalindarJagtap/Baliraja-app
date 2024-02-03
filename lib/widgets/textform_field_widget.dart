@@ -20,7 +20,6 @@ class TextFormFieldWidget extends StatelessWidget {
     this.lableText,
     this.style,
     this.suffix,
-    required InputDecoration decoration,
   }) : super(key: key);
 
   final String? hintText;

@@ -31,7 +31,7 @@ class AppStrings {
   static const String lastname = "आडनाव ";
   static const String enteryourname = "नाव :";
   static const String enteryourphonenumber = "Enteryourphonenumber";
-  static const String enteryourege = "वय";
+  static const String enteryourege = "वय:";
   static const String enteryourvilage = "गाव";
   static const String ling = "गाव";
   static const String varificationCode = "Varification Code";

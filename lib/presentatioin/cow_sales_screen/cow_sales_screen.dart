@@ -155,7 +155,7 @@ class _CowSalesState extends State<CowSales> {
                 TextFormFieldWidget(
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.heavy18pxTextSize,
-                  fontWeight: FontWeight.bold, decoration: InputDecoration(),
+                  fontWeight: FontWeight.bold, 
                 ),
                    SizedBox(
                   height: 12.h,
@@ -180,7 +180,6 @@ class _CowSalesState extends State<CowSales> {
                   height: 7.h,
                 ),
                 TextFormFieldWidget(
-                  decoration: InputDecoration(),
                   hintText: AppStrings.dahaliter,
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
@@ -208,7 +207,6 @@ class _CowSalesState extends State<CowSales> {
                   height: 7.h,
                 ),
                 TextFormFieldWidget(
-                  decoration: InputDecoration(),
                   fontSize: AppSizes.heavy18pxTextSize,
                   fontWeight: FontWeight.bold,
                 ),

@@ -1,4 +1,5 @@
 import 'package:baliraja/constants/app_colors.dart';
+import 'package:baliraja/constants/app_images.dart';
 import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/widgets/button_widget.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
@@ -21,6 +22,7 @@ List<String> man = [
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   String? dropdownValue = "लिंग";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,13 +53,23 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/Images/backgroundimage.png'),
-                  fit: BoxFit.cover)),
+            image: DecorationImage(
+              image: AssetImage('assets/Images/backgroundimage.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 90,
+              vertical: 20,
               horizontal: 25,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _customheaderRow(context),
+                _customtextfield(context),
+                _customOutlinedButton(context),
+              ],
             ),
           ),
         ),
@@ -65,73 +77,81 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     );
   }
 
-  _customheaderRow(BuildContext context) {
-    return Row(
-      children: const [],
+  Widget _customheaderRow(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Text(
+        '',
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      ),
     );
   }
 
-  _customtextfield(BuildContext context) {
-    return Column(children: [
-      Padding(
-        padding: EdgeInsets.only(top: 35.h),
-        child: TextFormFieldWidget(
-          decoration: const InputDecoration(
-            fillColor: Colors.white,
-            filled: true,
+  Widget _customtextfield(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        Stack(
+          children: [
+            ClipOval(
+              child: Image.asset(
+                AppImages.balirajaimg,
+                height: 130,
+                width: 130,
+              ),
+            ),
+            Positioned(
+              bottom: 0,
+              right: 0,
+              child: IconButton(
+                icon: Icon(Icons.camera_alt, color: Colors.white,size: 35.sp,),
+                onPressed: () {
+                  // Add your onPressed logic here
+                },
+              ),
+            ),
+          ],
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.h),
+          child: TextFormFieldWidget(
+            hintText: AppStrings.enteryourname,
+            fontSize: 18.sp,
           ),
-          hintText: AppStrings.enteryourname,
-          style: const TextStyle(fontSize: 20),
         ),
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-      CustomDropdownButton(
-        items: [
-          man[0],
-          man[1],
-          man[2],
-        ],
-        selectedValue: dropdownValue,
-        onChanged: (String? newValue) {
-          setState(
-            () {
-              dropdownValue = newValue ?? '11';
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: CustomDropdownButton(
+            items: man,
+            selectedValue: dropdownValue,
+            onChanged: (String? newValue) {
+              setState(() {
+                dropdownValue = newValue;
+              });
             },
-          );
-        },
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-      Padding(
-        padding: const EdgeInsets.only(top: 20),
-        child: TextFormFieldWidget(
-          decoration: const InputDecoration(),
-          hintText: AppStrings.enteryourege,
+          ),
         ),
-      ),
-      SizedBox(
-        height: 10.h,
-      ),
-    ]);
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: TextFormFieldWidget(
+            hintText: AppStrings.enteryourege,
+            fontSize:18.sp ,
+          ),
+        ),
+      ],
+    );
   }
 
-  _customOutlinedButton(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40),
-      child: Container(
-        height: 50.h,
-        width: 120.w,
-        child: OutlineButtonWidget(
-          onPressed: () {},
-          borderRadius: 20,
-          text: AppStrings.buttontext,
-        ),
+  Widget _customOutlinedButton(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 80),
+      height: 100,
+      width: 150,
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: OutlineButtonWidget(
+        onPressed: () {},
+        borderRadius: 20,
+        text: AppStrings.buttontext,
       ),
     );
   }
