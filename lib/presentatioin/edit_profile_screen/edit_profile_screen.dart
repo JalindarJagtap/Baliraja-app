@@ -78,7 +78,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 
   Widget _customheaderRow(BuildContext context) {
-    return Padding(
+    return const Padding(
       padding: EdgeInsets.symmetric(vertical: 10),
       child: Text(
         '',
@@ -120,7 +120,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: CustomDropdownButton(
             items: man,
             selectedValue: dropdownValue,
@@ -132,7 +132,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: TextFormFieldWidget(
             hintText: AppStrings.enteryourege,
             fontSize:18.sp ,
@@ -144,7 +144,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   Widget _customOutlinedButton(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 80),
+      margin: const EdgeInsets.only(left: 80),
       height: 100,
       width: 150,
       padding: const EdgeInsets.symmetric(vertical: 20),
