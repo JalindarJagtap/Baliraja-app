@@ -26,7 +26,7 @@ class Routes {
   GoRouter get router => _goRouter;
 
   late final GoRouter _goRouter = GoRouter(
-    initialLocation: splashScreen,
+    initialLocation: merchantscreen ,
     routes: [
       GoRoute(
         path: splashScreen,

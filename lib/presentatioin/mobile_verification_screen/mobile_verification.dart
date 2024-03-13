@@ -17,7 +17,7 @@ class VerificationScreen extends StatefulWidget {
 }
 
 class _VerificationScreenState extends State<VerificationScreen> {
-  final TextEditingController phoneController = TextEditingController(text: "+91");
+  final TextEditingController phoneController = TextEditingController(text: "+91 ");
   // final TextEditingController countrycode = TextEditingController(text: "+91");
   @override
   // void initState() {

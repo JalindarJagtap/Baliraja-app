@@ -2,6 +2,7 @@ import 'package:baliraja/constants/app_colors.dart';
 import 'package:baliraja/constants/app_images.dart';
 import 'package:baliraja/constants/app_string.dart';
 import 'package:baliraja/presentatioin/cow_sales_screen/cow_sales_screen.dart';
+import 'package:baliraja/presentatioin/edit_profile_screen/edit_profile_screen.dart';
 import 'package:baliraja/presentatioin/home_screen/home_screen.dart';
 import 'package:baliraja/widgets/button_widget.dart';
 import 'package:baliraja/widgets/custom_text_widget.dart';
@@ -161,7 +162,7 @@ class _GetOtpScreenState extends State<GetOtpScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const HomeScreen()));
+                                                const CowSales()));
                                   });
                                 } catch (ex) {
                                   ScaffoldMessenger.of(context).showSnackBar(
